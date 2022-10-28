@@ -1,4 +1,5 @@
 import NavigateButton from "./NavigateButton";
+
 function Home() {
   return (
     <>
