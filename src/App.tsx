@@ -1,5 +1,7 @@
+import { Outlet } from "react-router-dom";
+
 function App() {
-  return <div className='text-red-500'>App</div>;
+  return <Outlet />;
 }
 
 export default App;
