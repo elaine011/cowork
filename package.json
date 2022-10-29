@@ -10,6 +10,7 @@
     "@types/node": "^16.18.2",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2",
@@ -42,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.186",
     "install": "^0.13.0",
     "npm": "^8.19.2",
     "tailwindcss": "^3.2.1"
