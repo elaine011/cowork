@@ -2,7 +2,7 @@ import React from "react";
 
 function ActivityStatement() {
   return (
-    <div className='bg-white p-[20px] pb-[40px] mb-[40px] text-secondaryGary'>
+    <div className='bg-white p-[20px] pb-[40px] text-secondaryGary'>
       <h2 className='font-black'>預約活動說明：</h2>
       <ol className='list-decimal leading-[1.8] ml-5'>
         <li>

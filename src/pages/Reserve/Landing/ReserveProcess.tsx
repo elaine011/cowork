@@ -13,18 +13,23 @@ const process = [
 ];
 function ReserveProcess() {
   return (
-    <div className='px-[14px] py-[9px] bg-white rounded-[5px]'>
-      <h3 className='mb-2 text-[10px]'>活動流程 : </h3>
+    <div className='md:max-w-[571px] px-[14px] py-[9px] bg-white rounded-[5px]'>
+      <h3 className='mb-2 text-[10px] md:text-[16px]'>活動流程 : </h3>
       <div className='flex items-center'>
         {process.map(({ img, text, active }, index) => {
           return (
             <>
-              <div className='w-[60px] flex flex-col items-center justify-between'>
-                <img src={img} alt='processImg' key={index} />
+              <div className='md:w-[97px] w-[60px] flex flex-col items-center justify-between'>
+                <img
+                  src={img}
+                  alt='processImg'
+                  key={index}
+                  className='md:w-[53px]'
+                />
                 <p
                   className={`${
                     active && "text-primaryRed"
-                  } flex scale-[0.85] text-[12px]`}>
+                  } flex scale-[0.85] text-[12px] md:text-[14.5px]`}>
                   <span>{index + 1}.</span>
                   <span className='whitespace-nowrap'>{text}</span>
                 </p>
@@ -36,7 +41,7 @@ function ReserveProcess() {
                 <img
                   src={chevron}
                   alt='arrowImg'
-                  className='mx-auto w-[16px] h-[16px]'
+                  className='mx-auto md:min-w-[26px] md:h-[26px] w-[16px] h-[16px]'
                 />
               </div>
             </>
