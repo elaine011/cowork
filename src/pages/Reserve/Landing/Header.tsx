@@ -12,7 +12,6 @@ function Header() {
       <Hint
         text={"登記的手機號碼需與網購會員手機號碼相同，每會員帳號限預約一支"}
       />
-      <div></div>
     </header>
   );
 }
