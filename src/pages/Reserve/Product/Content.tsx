@@ -92,20 +92,20 @@ function Content() {
         <div className="mt-[14px]">
           <div className="mb-[15px]">
             <div>選擇型號</div>
-            {handleDuplicateModel(products).map((item, index) => (
-              <Tag text={item} color={""} isActive={false} />
+            {handleDuplicateModel(products).map((item) => (
+              <Tag text={item} color={""} />
             ))}
           </div>
           <div className="mb-[15px]">
             <div>選擇色彩</div>
-            {handleDuplicateColor(products).map((item, index) => (
-              <Tag text={item.name} color={item.code} isActive={false} />
+            {handleDuplicateColor(products).map((item) => (
+              <Tag text={item.name} color={item.code} />
             ))}
           </div>
           <div className="mb-[15px]">
             <div>選擇容量</div>
-            {handleDuplicateCapacity(products).map((item, index) => (
-              <Tag text={item} color={""} isActive={false} />
+            {handleDuplicateCapacity(products).map((item) => (
+              <Tag text={item} color={""} />
             ))}
           </div>
         </div>
