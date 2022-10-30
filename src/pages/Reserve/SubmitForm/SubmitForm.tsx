@@ -1,5 +1,11 @@
+import Header from "./Header";
+
 function SubmitForm() {
-  return <div>SubmitForm</div>;
+  return (
+    <main>
+      <Header />
+    </main>
+  );
 }
 
 export default SubmitForm;
