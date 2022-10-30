@@ -7,6 +7,7 @@ type PropsType = {
   bgColor: string;
   letterSpacing?: number;
   width: string;
+  clickFn?: () => void;
 };
 function FunctionButton({
   text,
@@ -15,6 +16,7 @@ function FunctionButton({
   bgColor,
   letterSpacing,
   width,
+  clickFn,
 }: PropsType) {
   return (
     <button
@@ -25,7 +27,8 @@ function FunctionButton({
         letterSpacing: letterSpacing ? `${letterSpacing}px` : "unset",
         width: width === "full" ? "100%" : `${width}px`,
       }}
-      className='px-[20px] py-[10px] rounded-[5px]'>
+      className='px-[20px] py-[10px] rounded-[5px]'
+      onClick={clickFn ? () => clickFn() : () => {}}>
       {text}
     </button>
   );

@@ -3,8 +3,10 @@ import ReserveProcess from "./ReserveProcess";
 import productsAll from "../../../images/reserve-products/all.png";
 import ActivityStatement from "../../../components/Common/ActivityStatement";
 import FunctionButton from "../../../components/Common/FunctionButton";
+import { useNavigate } from "react-router-dom";
 
 function Landing() {
+  const navigate = useNavigate();
   return (
     <div className='md:pt-[144px] max-w-[1100px] mx-auto bg-secondaryPageBackgroundGray px-[10px]'>
       <div className='md:flex md:mb-[126px] items-center justify-between'>
@@ -28,6 +30,7 @@ function Landing() {
           bgColor={"#ff5353"}
           letterSpacing={2}
           width={"full"}
+          clickFn={() => navigate("/reserve/submitForm")}
         />
       </div>
     </div>
