@@ -4,9 +4,9 @@ import ReserveFooter from "../../../components/Footers/ReserveFooter";
 function SubmitForm() {
   return (
     <>
-      <main>
+      <main className='md:px-4 md:bg-primaryPageBackgroundGray md:h-[100vh]'>
         <Header />
-        <div className='pt-[17px]'>
+        <div className='pt-[17px] bg-white md:py-[60px] max-w-[1080px] mx-auto'>
           <div className='w-[335px] mx-auto'>
             <div className='mb-[10px]'>
               <span className='text-primaryRed mr-1'>*</span>
