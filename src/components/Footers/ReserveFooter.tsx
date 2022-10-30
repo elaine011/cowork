@@ -9,7 +9,7 @@ type PropsType = {
 function ReserveFooter({ switchRoute, functionButtonText }: PropsType) {
   const navigate = useNavigate();
   return (
-    <footer className='fixed border-t-[2px] border-solid border-borderGray bg-white bottom-0 left-0 right-0 p-[15px]'>
+    <footer className='text-center fixed border-t-[2px] border-solid border-borderGray bg-white bottom-0 left-0 right-0 p-[15px]'>
       <FunctionButton
         text={functionButtonText}
         textColor={"white"}
