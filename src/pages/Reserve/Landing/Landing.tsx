@@ -10,7 +10,7 @@ function Landing() {
   return (
     <>
       <div className='fixed right-0 left-0 top-0 bottom-0 bg-secondaryPageBackgroundGray z-[-50]'></div>
-      <div className='md:pt-[144px] max-w-[1100px] mx-auto bg-secondaryPageBackgroundGray px-[10px]'>
+      <main className='md:pt-[144px] max-w-[1100px] mx-auto bg-secondaryPageBackgroundGray px-[10px]'>
         <div className='md:flex md:mb-[126px] items-center justify-between'>
           <div className='md:order-2 md:w-[572px]'>
             <Header />
@@ -35,7 +35,7 @@ function Landing() {
             clickFn={() => navigate("/reserve/submitForm")}
           />
         </div>
-      </div>
+      </main>
     </>
   );
 }
