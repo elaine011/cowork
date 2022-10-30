@@ -19,7 +19,7 @@ function ReserveFooter({
     <footer
       className={`text-center fixed border-t-[2px] border-solid border-borderGray bg-white bottom-0 left-0 right-0 ${
         hint ? "py-[5px]" : "py-[14px]"
-      } `}>
+      } px-[14px]`}>
       <div className='max-w-[1080px] mx-auto'>
         {hint && (
           <p
@@ -28,7 +28,6 @@ function ReserveFooter({
             {hint}
           </p>
         )}
-
         <FunctionButton
           text={functionButtonText}
           textColor={"white"}
