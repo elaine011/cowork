@@ -3,7 +3,7 @@ import FunctionButton from "../Common/FunctionButton";
 import { useNavigate } from "react-router-dom";
 
 type PropsType = {
-  switchRoute: string;
+  switchRoute?: string;
   functionButtonText: string;
   price?: number;
   wrapperContext?: "space-between" | "flex-start";
@@ -39,7 +39,7 @@ function ReserveFooter({
           bgColor={"#ff5353"}
           letterSpacing={2}
           width={"full"}
-          // clickFn={() => navigate(switchRoute)}
+          clickFn={() => switchRoute && navigate(switchRoute)}
         />
       </div>
     </footer>

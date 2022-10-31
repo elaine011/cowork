@@ -2,6 +2,7 @@ import Header from "./Header";
 import ReserveFooter from "../../../components/Footers/ReserveFooter";
 import ValidationErrorText from "../../../components/Common/ValidationErrorText";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 type Inputs = {
   userName: string;
@@ -10,13 +11,19 @@ type Inputs = {
   termsCheck: boolean;
 };
 function SubmitForm() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
-
+  const onSubmit: SubmitHandler<Inputs> = ({ userName, mail, phone }) => {
+    sessionStorage.setItem(
+      "registerInfo",
+      JSON.stringify({ userInfo: { userName, mail, phone } })
+    );
+    navigate("/reserve/product");
+  };
   return (
     <>
       <div className="fixed right-0 left-0 top-0 bottom-0 bg-secondaryPageBackgroundGray z-[-50]"></div>
@@ -131,10 +138,7 @@ function SubmitForm() {
           </div>
         </div>
       </main>
-      <ReserveFooter
-        switchRoute="/reserve/product"
-        functionButtonText="選擇商品"
-      />
+      <ReserveFooter functionButtonText="選擇商品" />
     </>
   );
 }
