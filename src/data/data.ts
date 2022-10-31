@@ -8,6 +8,7 @@ import Product_07 from "../images/reserve-products/product_07.png";
 import Product_08 from "../images/reserve-products/product_08.png";
 import Product_09 from "../images/reserve-products/product_09.png";
 import { ProductType } from "../types/type";
+
 export const products = [
   {
     id: 1,
