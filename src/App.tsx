@@ -1,7 +1,13 @@
 import { Outlet } from "react-router-dom";
+import ReserveHeader from "./components/Headers/ReserveHeader";
 
 function App() {
-  return <Outlet />;
+  return (
+    <>
+      <ReserveHeader />
+      <Outlet />
+    </>
+  );
 }
 
 export default App;
