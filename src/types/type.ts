@@ -1,4 +1,9 @@
-export type initType = {
-  name: string;
-  fn: () => void;
+export type ProductType = {
+  id: number;
+  title: string;
+  price: number;
+  model: string;
+  color: { name: string; code: string };
+  capacity: string;
+  stock: number;
 };
