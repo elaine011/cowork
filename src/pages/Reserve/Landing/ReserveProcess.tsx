@@ -23,7 +23,7 @@ function ReserveProcess() {
                 <img
                   src={img}
                   alt='processImg'
-                  key={index}
+                  key={`${index}-${text}}`}
                   className='md:w-[53px]'
                 />
                 <p
