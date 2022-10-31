@@ -1,32 +1,14 @@
 import { useState } from "react";
-import { products } from "../../../data/data";
-import Product_01 from "../../../images/reserve-products/product_01.png";
-import Product_02 from "../../../images/reserve-products/product_02.png";
-import Product_03 from "../../../images/reserve-products/product_03.png";
-import Product_04 from "../../../images/reserve-products/product_04.png";
-import Product_05 from "../../../images/reserve-products/product_05.png";
-import Product_06 from "../../../images/reserve-products/product_06.png";
-import Product_07 from "../../../images/reserve-products/product_07.png";
-import Product_08 from "../../../images/reserve-products/product_08.png";
-import Product_09 from "../../../images/reserve-products/product_09.png";
+import { images, products } from "../../../data/data";
+import chevron_left from "../../../images/icons/icon_common_back.png";
+import chevron_right from "../../../images/icons/icon_common_to.png";
 import { ProductType } from "../../../types/type";
 import { handlePriceCommas } from "../../../utils/handlePriceCommas";
 import SlideImg from "./SlideImg";
 import Tag from "./Tag";
 
 function Content() {
-  const [productId, setProductId] = useState(0);
-  const images = [
-    { id: 1, src: Product_01 },
-    { id: 2, src: Product_02 },
-    { id: 3, src: Product_03 },
-    { id: 4, src: Product_04 },
-    { id: 5, src: Product_05 },
-    { id: 6, src: Product_06 },
-    { id: 7, src: Product_07 },
-    { id: 8, src: Product_08 },
-    { id: 9, src: Product_09 },
-  ];
+  const [productId, setProductId] = useState(1);
 
   function handleDuplicateModel(products: ProductType[]): string[] {
     return products
@@ -59,11 +41,11 @@ function Content() {
   }
 
   return (
-    <section className="md:max-w-[1080px] md:justify-between md:mx-auto md:flex md:min-w-[803px] md:bg-[#ffffff] md:px-auto md:py-[72px] md:px-[36px]">
+    <section className="md:max-w-[1080px] md:justify-between md:mx-auto md:flex md:min-w-[803px] md:bg-[#ffffff] md:px-auto md:py-[72px] md:px-[36px] md:border md:shadow-[0px_0px_18px_rgba(0,0,0,0.05)] md:border-solid md:border-borderGray md:rounded-[10px]">
       <div className="md:max-w-[476px] md:flex-auto md:h-[426px]">
         <div className="flex justify-center h-[375px] items-center md:bg-primaryPageBackgroundGray bg-secondaryPageBackgroundGray ">
           {images.map((img, index) =>
-            productId === index ? (
+            productId === index + 1 ? (
               <img
                 src={img.src}
                 alt="productImage"
@@ -75,13 +57,22 @@ function Content() {
             )
           )}
         </div>
-        <div className="hidden md:block mt-3">
+        <div className="hidden md:block mt-3 relative">
+          <img
+            src={chevron_left}
+            className="w-[30px] h-[30px] absolute top-[40%] left-[-30px]"
+          ></img>
           <SlideImg />
+          <img
+            src={chevron_right}
+            className="w-[30px] h-[30px] absolute top-[40%] right-[-30px]"
+          ></img>
         </div>
       </div>
-      <div className="p-4 md:w-[460px]">
+
+      <div className="p-4 md:w-[460px] md:px-8 md:py-4">
         {products.map((item, index) =>
-          productId === index ? (
+          productId === index + 1 ? (
             <div>
               <div className="text-[#333333] font-medium leading-[23px]">
                 {item.title}

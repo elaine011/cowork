@@ -4,6 +4,7 @@ type TagProps = {
   text: string;
   color: string;
 };
+
 function Tag({ text, color }: TagProps) {
   const [isActive, setIsActive] = useState(false);
 
