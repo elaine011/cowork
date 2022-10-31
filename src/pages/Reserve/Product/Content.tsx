@@ -9,9 +9,9 @@ import Product_06 from "../../../images/reserve-products/product_06.png";
 import Product_07 from "../../../images/reserve-products/product_07.png";
 import Product_08 from "../../../images/reserve-products/product_08.png";
 import Product_09 from "../../../images/reserve-products/product_09.png";
-import Product_10 from "../../../images/reserve-products/product_10.png";
 import { ProductType } from "../../../types/type";
 import { handlePriceCommas } from "../../../utils/handlePriceCommas";
+import SlideImg from "./SlideImg";
 import Tag from "./Tag";
 
 function Content() {
@@ -26,7 +26,6 @@ function Content() {
     { id: 7, src: Product_07 },
     { id: 8, src: Product_08 },
     { id: 9, src: Product_09 },
-    { id: 10, src: Product_10 },
   ];
 
   function handleDuplicateModel(products: ProductType[]): string[] {
@@ -60,17 +59,27 @@ function Content() {
   }
 
   return (
-    <section>
-      <div className="flex justify-center h-[375px] items-center bg-secondaryPageBackgroundGray">
-        {images.map((img, index) =>
-          productId === index ? (
-            <img src={img.src} alt="productImage" key={index} />
-          ) : (
-            <></>
-          )
-        )}
+    <section className="md:max-w-[1080px] md:justify-between md:mx-auto md:flex md:min-w-[803px] md:bg-[#ffffff] md:px-auto md:py-[72px] md:px-[36px]">
+      <div className="md:max-w-[476px] md:flex-auto md:h-[426px]">
+        <div className="flex justify-center h-[375px] items-center md:bg-primaryPageBackgroundGray bg-secondaryPageBackgroundGray ">
+          {images.map((img, index) =>
+            productId === index ? (
+              <img
+                src={img.src}
+                alt="productImage"
+                className="md:max-w-none"
+                key={index}
+              />
+            ) : (
+              <></>
+            )
+          )}
+        </div>
+        <div className="hidden md:block mt-3">
+          <SlideImg />
+        </div>
       </div>
-      <div className="p-4">
+      <div className="p-4 md:w-[460px]">
         {products.map((item, index) =>
           productId === index ? (
             <div>
