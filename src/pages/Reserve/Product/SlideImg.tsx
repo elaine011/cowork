@@ -5,10 +5,9 @@ function SlideImg() {
     <div className="flex justify-between">
       {images.map((img, index) =>
         index <= 4 ? (
-          <div>
+          <div key={img.id}>
             <img
               src={img.src}
-              key={img.id}
               className="bg-primaryPageBackgroundGray w-[82px]"
             />
           </div>
