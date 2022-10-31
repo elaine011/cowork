@@ -5,14 +5,16 @@ import { useNavigate } from "react-router-dom";
 type PropsType = {
   switchRoute: string;
   functionButtonText: string;
+  price?: number;
+  wrapperContext?: "space-between" | "flex-start";
   hint?: string;
-  hintPos?: "left" | "right" | "center";
 };
 function ReserveFooter({
   switchRoute,
+  price,
+  wrapperContext,
   functionButtonText,
   hint,
-  hintPos,
 }: PropsType) {
   const navigate = useNavigate();
   return (
@@ -21,13 +23,15 @@ function ReserveFooter({
         hint ? "py-[5px]" : "py-[14px]"
       } px-[14px]`}>
       <div className='max-w-[1080px] mx-auto'>
-        {hint && (
-          <p
-            style={{ textAlign: hintPos }}
-            className='text-[20px] mb-[5px] text-primaryRed'>
-            {hint}
-          </p>
-        )}
+        <div className='flex' style={{ justifyContent: wrapperContext }}>
+          {hint && (
+            <p className='text-[20px] mb-[5px] text-primaryRed'>{hint}</p>
+          )}
+          {price && (
+            <p className='text-[20px] mb-[5px] text-primaryRed'>NT.{price}</p>
+          )}
+        </div>
+
         <FunctionButton
           text={functionButtonText}
           textColor={"white"}
