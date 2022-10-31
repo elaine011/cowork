@@ -39,7 +39,7 @@ function ReserveFooter({
           bgColor={"#ff5353"}
           letterSpacing={2}
           width={"full"}
-          clickFn={() => navigate(switchRoute)}
+          // clickFn={() => navigate(switchRoute)}
         />
       </div>
     </footer>
