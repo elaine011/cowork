@@ -16,6 +16,7 @@ module.exports = {
         thirdGray: "#999999",
         hintGray: "#616161",
         primaryBrown: "#c89185",
+        borderGray: "#dddddd",
       },
     },
   },

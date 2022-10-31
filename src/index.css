@@ -4,5 +4,5 @@
 
 html {
   font-family: 'Noto Sans TC', sans-serif;
-  background-color: #fafafa;
+  box-sizing: border-box;
 }

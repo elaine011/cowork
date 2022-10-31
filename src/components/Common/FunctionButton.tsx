@@ -27,7 +27,7 @@ function FunctionButton({
         letterSpacing: letterSpacing ? `${letterSpacing}px` : "unset",
         width: width === "full" ? "100%" : `${width}px`,
       }}
-      className='px-[20px] py-[10px] rounded-[5px]'
+      className='px-[20px] py-[10px] rounded-[5px] md:text-[20px]'
       onClick={clickFn ? () => clickFn() : () => {}}>
       {text}
     </button>
