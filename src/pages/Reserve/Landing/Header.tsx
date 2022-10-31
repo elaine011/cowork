@@ -7,7 +7,7 @@ function Header() {
         iPhone新機搶先登記
       </h1>
       <h2 className='md:text-black md:text-[24px] text-[14px] text-primaryGray'>
-        活動日期：即日起 - 9/23{" "}
+        活動日期：即日起 - 9/23
         <span className='md:hidden'>(限量預約登記，額滿為止)</span>
       </h2>
       <Hint
