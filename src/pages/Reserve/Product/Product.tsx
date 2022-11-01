@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ReserveFooter from "../../../components/Footers/ReserveFooter";
 import { products } from "../../../data/data";
 import { Context } from "../../../utils/context";
@@ -14,6 +15,14 @@ function Product() {
     id: 6,
   });
   const [showAlertBox, setShowAlertBox] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const registerInfo = JSON.parse(
+      sessionStorage.getItem("registerInfo") as string
+    );
+    !registerInfo && navigate("/reserve/submitForm");
+  }, []);
 
   useEffect(() => {
     const product = products.filter(
