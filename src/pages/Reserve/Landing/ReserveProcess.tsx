@@ -15,15 +15,19 @@ function ReserveProcess() {
   return (
     <div className='md:max-w-[571px] px-[14px] py-[9px] bg-white rounded-[5px]'>
       <h3 className='mb-2 text-[10px] md:text-[16px]'>活動流程 : </h3>
-      <div className='flex items-center'>
+      <div className='flex'>
         {process.map(({ img, text, active }, index) => {
           return (
-            <>
+            <div
+              className={`flex items-center ${
+                index === process.length - 1 ? "" : "grow"
+              }`}
+              key={index}>
               <div className='md:w-[97px] w-[60px] flex flex-col items-center justify-between'>
                 <img
                   src={img}
                   alt='processImg'
-                  key={index}
+                  key={`${index}-${text}}`}
                   className='md:w-[53px]'
                 />
                 <p
@@ -44,7 +48,7 @@ function ReserveProcess() {
                   className='mx-auto md:min-w-[26px] md:h-[26px] w-[16px] h-[16px]'
                 />
               </div>
-            </>
+            </div>
           );
         })}
       </div>
