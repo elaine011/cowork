@@ -7,6 +7,7 @@ type PropsType = {
   price?: number;
   wrapperContext?: "space-between" | "flex-start";
   hint?: string;
+  showAlertBox?: () => boolean;
 };
 function ReserveFooter({
   switchRoute,
@@ -14,6 +15,7 @@ function ReserveFooter({
   wrapperContext,
   functionButtonText,
   hint,
+  showAlertBox,
 }: PropsType) {
   const navigate = useNavigate();
   return (
@@ -39,7 +41,12 @@ function ReserveFooter({
           bgColor={"#ff5353"}
           letterSpacing={2}
           width={"full"}
-          clickFn={() => switchRoute && navigate(switchRoute)}
+          clickFn={() =>
+            showAlertBox &&
+            showAlertBox() &&
+            switchRoute &&
+            navigate(switchRoute)
+          }
         />
       </div>
     </footer>

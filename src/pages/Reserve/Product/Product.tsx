@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ReserveFooter from "../../../components/Footers/ReserveFooter";
 import { products } from "../../../data/data";
 import { Context } from "../../../utils/context";
+import AlertBox from "./AlertBox";
 import Content from "./Content";
 
 function Product() {
@@ -12,7 +13,7 @@ function Product() {
     price: 0,
     id: 6,
   });
-  console.log(selectedProducts.id);
+  const [showAlertBox, setShowAlertBox] = useState(false);
 
   useEffect(() => {
     const product = products.filter(
@@ -41,16 +42,27 @@ function Product() {
     selectedProducts.capacity,
   ]);
 
+  function handleShowAlertBox() {
+    setShowAlertBox(
+      selectedProducts.color === "" || selectedProducts.capacity === ""
+    );
+    return !(selectedProducts.color === "" || selectedProducts.capacity === "");
+  }
+
   return (
     <Context.Provider
       value={{ selectedProducts: [selectedProducts, setSelectedProducts] }}
     >
       <div className="fixed bottom-0 left-0 top-0 right-0 -z-50 md:bg-primaryPageBackgroundGray"></div>
-      <div className="md:px-5">
+      <div className="md:px-5 relative grid place-items-center">
         <h1 className="hidden md:flex text-[64px]  justify-center leading-[80px] mb-[43px] md:mt-[53px]">
           選擇商品
         </h1>
         <Content />
+        <AlertBox
+          showAlertBox={showAlertBox}
+          setShowAlertBox={setShowAlertBox}
+        />
       </div>
       <ReserveFooter
         switchRoute={"/reserve/verified"}
@@ -58,6 +70,7 @@ function Product() {
         price={selectedProducts.price}
         wrapperContext={"space-between"}
         hint={"一經送出商品選項，不得修改"}
+        showAlertBox={handleShowAlertBox}
       />
     </Context.Provider>
   );
