@@ -46,6 +46,23 @@ function Product() {
     setShowAlertBox(
       selectedProducts.color === "" || selectedProducts.capacity === ""
     );
+    if (!(selectedProducts.color === "" || selectedProducts.capacity === "")) {
+      const registerInfo = JSON.parse(
+        sessionStorage.getItem("registerInfo") as string
+      );
+      sessionStorage.setItem(
+        "registerInfo",
+        JSON.stringify({
+          ...registerInfo,
+          product: {
+            model: selectedProducts.model,
+            color: selectedProducts.color,
+            capacity: selectedProducts.capacity,
+            price: selectedProducts.price,
+          },
+        })
+      );
+    }
     return !(selectedProducts.color === "" || selectedProducts.capacity === "");
   }
 
