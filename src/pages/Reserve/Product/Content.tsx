@@ -13,6 +13,12 @@ function Content() {
   const [selectedProducts, setSelectedProducts] =
     useContext(Context)["selectedProducts"];
 
+  function hasStock(products: ProductType[]) {
+    return products
+      .filter((item) => item.stock > 0)
+      .filter((item) => item.model === selectedProducts.model);
+  }
+
   function handleDuplicateModel(products: ProductType[]): string[] {
     return products
       .map((item) => item.model)
@@ -50,6 +56,8 @@ function Content() {
       )
       .sort();
   }
+
+  console.log(hasStock(products));
 
   return (
     <section className="md:max-w-[1080px] md:justify-between md:mx-auto md:flex md:min-w-[803px] md:bg-[#ffffff] md:px-auto md:py-[72px] md:px-[36px] md:border md:shadow-[0px_0px_18px_rgba(0,0,0,0.05)] md:border-solid md:border-borderGray md:rounded-[10px]">
@@ -102,6 +110,7 @@ function Content() {
               <Tag
                 text={item}
                 key={index}
+                hasStock={true}
                 onClickFn={() =>
                   setSelectedProducts({
                     model: item,
@@ -130,6 +139,9 @@ function Content() {
                 text={item.name}
                 color={item.code}
                 key={index}
+                hasStock={hasStock(products)
+                  .map((item) => item.color.name)
+                  .includes(item.name)}
                 onClickFn={() =>
                   setSelectedProducts({
                     ...selectedProducts,
@@ -145,6 +157,9 @@ function Content() {
               <Tag
                 text={item}
                 key={index}
+                hasStock={hasStock(products)
+                  .map((item) => item.capacity)
+                  .includes(item)}
                 onClickFn={() =>
                   setSelectedProducts({ ...selectedProducts, capacity: item })
                 }

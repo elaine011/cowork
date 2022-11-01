@@ -8,7 +8,7 @@ function SlideImg() {
           <div key={img.id}>
             <img
               src={img.src}
-              className="bg-primaryPageBackgroundGray w-[82px]"
+              className="bg-primaryPageBackgroundGray w-[82px] cursor-pointer"
             />
           </div>
         ) : (

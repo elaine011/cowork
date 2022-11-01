@@ -12,7 +12,6 @@ function Product() {
     price: 0,
     id: 6,
   });
-  console.log(selectedProducts);
 
   useEffect(() => {
     const product = products.filter(
