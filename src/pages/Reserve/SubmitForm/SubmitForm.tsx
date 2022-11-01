@@ -26,8 +26,8 @@ function SubmitForm() {
   };
   return (
     <>
-      <div className="fixed right-0 left-0 top-0 bottom-0 bg-secondaryPageBackgroundGray z-[-50]"></div>
-      <main className="md:px-4 md:bg-primaryPageBackgroundGray md:mb-[100px]">
+      <div className="fixed right-0 left-0 top-0 bottom-0 md:bg-primaryPageBackgroundGray z-[-50]"></div>
+      <main className="md:px-4 md:mb-[100px]">
         <Header />
         <div className="py-[17px] bg-white md:py-[60px] max-w-[1080px] mx-auto">
           <div className="w-[335px] mx-auto">
