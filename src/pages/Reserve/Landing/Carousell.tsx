@@ -1,4 +1,3 @@
-import e from "express";
 import { useEffect, useRef, useState } from "react";
 import { images } from "../../../data/data";
 import controlLeft from "../../../images/icons/reserveControlLeft.png";
