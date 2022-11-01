@@ -20,7 +20,7 @@ function SubmitForm() {
   const onSubmit: SubmitHandler<Inputs> = ({ userName, mail, phone }) => {
     sessionStorage.setItem(
       "registerInfo",
-      JSON.stringify({ userInfo: { userName, mail, phone } })
+      JSON.stringify({ user: { userName, mail, phone } })
     );
     navigate("/reserve/product");
   };
