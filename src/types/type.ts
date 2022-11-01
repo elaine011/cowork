@@ -6,4 +6,5 @@ export type ProductType = {
   color: { name: string; code: string };
   capacity: string;
   stock: number;
+  img: string;
 };

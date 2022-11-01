@@ -1,5 +1,3 @@
-import React from "react";
-
 type PropsType = {
   text: string;
   textColor: string;
@@ -29,7 +27,8 @@ function FunctionButton({
       }}
       form="userInfo"
       className="px-[20px] py-[10px] rounded-[5px] md:text-[20px]"
-      onClick={clickFn ? () => clickFn() : () => {}}>
+      onClick={clickFn ? () => clickFn() : () => {}}
+    >
       {text}
     </button>
   );

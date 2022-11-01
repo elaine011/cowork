@@ -1,15 +1,27 @@
-import { images } from "../../../data/data";
+import { useContext } from "react";
+import { products } from "../../../data/data";
+import { ProductType } from "../../../types/type";
+import { Context } from "../../../utils/context";
 
 function SlideImg() {
+  const [selectedProducts, setSelectedProducts] =
+    useContext(Context)["selectedProducts"];
+
+  function handleSlideImg(products: ProductType[]) {
+    return products.filter((item) => item.model === selectedProducts.model);
+  }
+
   return (
     <div className="flex justify-between">
-      {images.map((img, index) =>
+      {handleSlideImg(products).map((item, index) =>
         index <= 4 ? (
-          <div>
+          <div key={index}>
             <img
-              src={img.src}
-              key={img.id}
-              className="bg-primaryPageBackgroundGray w-[82px]"
+              src={item.img}
+              className="bg-primaryPageBackgroundGray w-[82px] cursor-pointer"
+              onClick={() =>
+                setSelectedProducts({ ...selectedProducts, id: item.id })
+              }
             />
           </div>
         ) : (

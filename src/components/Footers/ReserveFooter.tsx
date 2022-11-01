@@ -1,6 +1,5 @@
-import React from "react";
-import FunctionButton from "../Common/FunctionButton";
 import { useNavigate } from "react-router-dom";
+import FunctionButton from "../Common/FunctionButton";
 
 type PropsType = {
   switchRoute?: string;
@@ -8,6 +7,7 @@ type PropsType = {
   price?: number;
   wrapperContext?: "space-between" | "flex-start";
   hint?: string;
+  showAlertBox?: () => boolean;
 };
 function ReserveFooter({
   switchRoute,
@@ -15,13 +15,15 @@ function ReserveFooter({
   wrapperContext,
   functionButtonText,
   hint,
+  showAlertBox,
 }: PropsType) {
   const navigate = useNavigate();
   return (
     <footer
       className={`text-center fixed border-t-[2px] border-solid border-borderGray bg-white bottom-0 left-0 right-0 ${
         hint ? "py-[5px]" : "py-[14px]"
-      } px-[14px]`}>
+      } px-[14px]`}
+    >
       <div className="max-w-[1080px] mx-auto">
         <div className="flex" style={{ justifyContent: wrapperContext }}>
           {hint && (
@@ -39,7 +41,12 @@ function ReserveFooter({
           bgColor={"#ff5353"}
           letterSpacing={2}
           width={"full"}
-          clickFn={() => switchRoute && navigate(switchRoute)}
+          clickFn={() =>
+            showAlertBox &&
+            showAlertBox() &&
+            switchRoute &&
+            navigate(switchRoute)
+          }
         />
       </div>
     </footer>
