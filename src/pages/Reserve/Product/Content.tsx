@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import Hint from "../../../components/Common/Hint";
 import { products } from "../../../data/data";
 import chevron_left from "../../../images/icons/icon_common_back.png";
 import chevron_right from "../../../images/icons/icon_common_to.png";
@@ -57,20 +58,19 @@ function Content() {
   }
 
   return (
-    <section className="md:max-w-[1080px] md:justify-between md:mx-auto md:flex md:min-w-[803px] md:bg-[#ffffff] md:px-auto md:py-[72px] md:px-[36px] md:border md:shadow-[0px_0px_18px_rgba(0,0,0,0.05)] md:border-solid md:border-borderGray md:rounded-[10px] w-full">
+    <section className="md:max-w-[1080px] md:justify-between md:mx-auto md:flex md:bg-[#ffffff] md:px-auto md:py-[72px] md:px-[36px] md:border md:shadow-[0px_0px_18px_rgba(0,0,0,0.05)] md:border-solid md:border-borderGray md:rounded-[10px] w-full">
       <div className="md:max-w-[476px] md:flex-auto md:h-[426px]">
         <div className="flex justify-center h-[375px] items-center md:bg-primaryPageBackgroundGray bg-secondaryPageBackgroundGray ">
-          {products.map((item, index) =>
-            selectedProducts.id === index + 1 ? (
-              <img
-                src={item.img}
-                alt="productImage"
-                className="md:max-w-none"
-                key={index}
-              />
-            ) : (
-              <div key={index}></div>
-            )
+          {products.map(
+            (item, index) =>
+              selectedProducts.id === index + 1 && (
+                <img
+                  src={item.img}
+                  alt="productImage"
+                  className="md:max-w-none"
+                  key={index}
+                />
+              )
           )}
         </div>
         <div className="hidden md:block mt-3 relative">
@@ -86,7 +86,7 @@ function Content() {
         </div>
       </div>
 
-      <div className="p-4 md:w-[460px] md:px-8 md:py-4">
+      <div className="p-4 md:px-8 md:py-4">
         <div>
           <div className="text-[#333333] font-medium leading-[23px]">
             Apple {selectedProducts.model}
@@ -95,8 +95,12 @@ function Content() {
             NT${handlePriceCommas(selectedProducts.price)}
           </div>
           <div className="mt-2 text-primaryRed font-normal text-sm">
-            登記的手機號碼需與會員手機號碼相同，每人限購一支
-            一經送出商品選項，不得修改
+            <Hint
+              text={
+                "登記的手機號碼需與會員手機號碼相同，每人限購一支一經送出商品選項，不得修改"
+              }
+              fontSize={'14px'}
+            />
           </div>
         </div>
 

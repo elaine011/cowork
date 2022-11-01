@@ -601,3 +601,15 @@ export const products = [
     img: "",
   },
 ] as ProductType[];
+
+export const images = [
+  { id: 1, src: Product_01 },
+  { id: 2, src: Product_02 },
+  { id: 3, src: Product_03 },
+  { id: 4, src: Product_04 },
+  { id: 5, src: Product_05 },
+  { id: 6, src: Product_06 },
+  { id: 7, src: Product_07 },
+  { id: 8, src: Product_08 },
+  { id: 9, src: Product_09 },
+];
