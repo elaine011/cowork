@@ -43,7 +43,7 @@ function SubmitForm() {
                   required: true,
                   maxLength: 7,
                   min: 2,
-                  pattern: /[\u4e00-\u9fa5]/i,
+                  pattern: /^[\u4e00-\u9fa5]+$/i,
                 })}
                 placeholder="輸入中文姓名，限制 2~7 個字"
                 className={`text-[14px] pl-[10px] border border-solid ${
