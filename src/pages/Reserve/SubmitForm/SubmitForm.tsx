@@ -57,7 +57,6 @@ function SubmitForm() {
               {errors.userName?.type && (
                 <ValidationErrorText text={"請輸入中文姓名，限制2~7個字"} />
               )}
-              <>{console.log(errors)}</>
               <div className="mb-[10px]">
                 <span className="text-primaryRed mr-1">*</span>
                 <label htmlFor="phone">手機號碼 (需通過簡訊驗證)</label>
