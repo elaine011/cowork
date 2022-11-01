@@ -12,6 +12,7 @@ function Product() {
     price: 0,
     id: 6,
   });
+  console.log(selectedProducts.id);
 
   useEffect(() => {
     const product = products.filter(
@@ -19,11 +20,26 @@ function Product() {
         item.model === selectedProducts.model &&
         item.capacity === selectedProducts.capacity
     );
+    const productId = products.filter(
+      (item) => item.model === selectedProducts.model
+    );
     setSelectedProducts({
       ...selectedProducts,
       price: product.length !== 0 ? product[0].price : 0,
+      id:
+        productId.length !== 0 && selectedProducts.color === ""
+          ? productId[0].id
+          : selectedProducts.color !== ""
+          ? productId.filter(
+              (item) => item.color.name === selectedProducts.color
+            )[0].id
+          : 6,
     });
-  }, [selectedProducts.model, selectedProducts.capacity]);
+  }, [
+    selectedProducts.model,
+    selectedProducts.color,
+    selectedProducts.capacity,
+  ]);
 
   return (
     <Context.Provider

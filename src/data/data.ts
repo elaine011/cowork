@@ -18,6 +18,7 @@ export const products = [
     color: { name: "天峰藍色", code: "#adc6dc" },
     capacity: "128GB",
     stock: 1,
+    img: Product_01,
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ export const products = [
     color: { name: "銀色", code: "#f2f3ee" },
     capacity: "128GB",
     stock: 3,
+    img: Product_02,
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ export const products = [
     color: { name: "金色", code: "#f9e9d2" },
     capacity: "256GB",
     stock: 6,
+    img: Product_03,
   },
   {
     id: 4,
@@ -45,6 +48,7 @@ export const products = [
     color: { name: "黑墨色", code: "#5e5d5a" },
     capacity: "512GB",
     stock: 9,
+    img: Product_04,
   },
   {
     id: 5,
@@ -53,52 +57,58 @@ export const products = [
     model: "iphone 13 mini",
     color: { name: "粉紅色", code: "#fbe2dd" },
     capacity: "128GB",
-    stock: 0,
+    stock: 4,
+    img: Product_05,
   },
   {
     id: 6,
     title: "Apple iphone 13",
     price: 25900,
     model: "iphone 13",
-    color: { name: "粉紅色", code: "#fbe2dd" },
+    color: { name: "藍色", code: "#447792" },
     capacity: "128GB",
     stock: 2,
+    img: Product_06,
   },
   {
     id: 7,
     title: "Apple iphone 13 mini",
     price: 22900,
     model: "iphone 13 mini",
-    color: { name: "藍色", code: "#447792" },
+    color: { name: "午夜色", code: "#42474e" },
     capacity: "128GB",
     stock: 3,
+    img: Product_07,
   },
   {
     id: 8,
     title: "Apple iphone 13 mini",
     price: 33400,
     model: "iphone 13 mini",
-    color: { name: "午夜色", code: "#42474e" },
+    color: { name: "星光色", code: "#fbf7f4" },
     capacity: "512GB",
     stock: 10,
+    img: Product_08,
   },
   {
     id: 9,
     title: "Apple iphone 13",
     price: 36400,
     model: "iphone 13",
-    color: { name: "星光色", code: "#fbf7f4" },
+    color: { name: "紅色", code: "#c82333" },
     capacity: "256GB",
     stock: 5,
+    img: Product_09,
   },
   {
     id: 10,
     title: "Apple iphone 13",
     price: 29400,
     model: "iphone 13",
-    color: { name: "紅色", code: "#c82333" },
+    color: { name: "星光色", code: "#fbf7f4" },
     capacity: "256GB",
-    stock: 2,
+    stock: 0,
+    img: "",
   },
   {
     id: 11,
@@ -108,15 +118,17 @@ export const products = [
     color: { name: "午夜色", code: "#42474e" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 12,
     title: "Apple iphone 13 mini",
     price: 22900,
     model: "iphone 13 mini",
-    color: { name: "星光色", code: "#fbf7f4" },
+    color: { name: "藍色", code: "#447792" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 13,
@@ -126,6 +138,7 @@ export const products = [
     color: { name: "紅色", code: "#c82333" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 14,
@@ -135,6 +148,7 @@ export const products = [
     color: { name: "粉紅色", code: "#fbe2dd" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 15,
@@ -144,6 +158,7 @@ export const products = [
     color: { name: "藍色", code: "#447792" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 16,
@@ -153,6 +168,7 @@ export const products = [
     color: { name: "午夜色", code: "#42474e" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 17,
@@ -162,6 +178,7 @@ export const products = [
     color: { name: "星光色", code: "#fbf7f4" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 18,
@@ -171,6 +188,7 @@ export const products = [
     color: { name: "紅色", code: "#c82333" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 19,
@@ -180,6 +198,7 @@ export const products = [
     color: { name: "粉紅色", code: "#fbe2dd" },
     capacity: "512GB",
     stock: 0,
+    img: "",
   },
   {
     id: 20,
@@ -189,6 +208,7 @@ export const products = [
     color: { name: "藍色", code: "#447792" },
     capacity: "512GB",
     stock: 0,
+    img: "",
   },
   {
     id: 21,
@@ -198,6 +218,7 @@ export const products = [
     color: { name: "星光色", code: "#fbf7f4" },
     capacity: "512GB",
     stock: 0,
+    img: "",
   },
   {
     id: 22,
@@ -207,6 +228,7 @@ export const products = [
     color: { name: "紅色", code: "#c82333" },
     capacity: "512GB",
     stock: 0,
+    img: "",
   },
   {
     id: 23,
@@ -216,15 +238,17 @@ export const products = [
     color: { name: "紅色", code: "#c82333" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 24,
     title: "Apple iphone 13",
     price: 25900,
     model: "iphone 13",
-    color: { name: "藍色", code: "#447792" },
+    color: { name: "粉紅色", code: "#fbe2dd" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 25,
@@ -234,6 +258,7 @@ export const products = [
     color: { name: "午夜色", code: "#42474e" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 26,
@@ -243,6 +268,7 @@ export const products = [
     color: { name: "星光色", code: "#fbf7f4" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 27,
@@ -252,6 +278,7 @@ export const products = [
     color: { name: "粉紅色", code: "#fbe2dd" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 28,
@@ -261,6 +288,7 @@ export const products = [
     color: { name: "藍色", code: "#447792" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 28,
@@ -270,6 +298,7 @@ export const products = [
     color: { name: "午夜色", code: "#42474e" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 29,
@@ -279,6 +308,7 @@ export const products = [
     color: { name: "金色", code: "#f9e9d2" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 30,
@@ -288,6 +318,7 @@ export const products = [
     color: { name: "石墨色", code: "#5e5d59" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 31,
@@ -297,6 +328,7 @@ export const products = [
     color: { name: "石墨色", code: "#5e5d59" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 32,
@@ -306,6 +338,7 @@ export const products = [
     color: { name: "金色", code: "#f9e9d2" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 33,
@@ -315,6 +348,7 @@ export const products = [
     color: { name: "銀色", code: "#f2f3ee" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 34,
@@ -324,6 +358,7 @@ export const products = [
     color: { name: "天峰藍色", code: "#adc6dc" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 35,
@@ -333,6 +368,7 @@ export const products = [
     color: { name: "石墨色", code: "#5e5d59" },
     capacity: "512GB",
     stock: 0,
+    img: "",
   },
   {
     id: 36,
@@ -342,6 +378,7 @@ export const products = [
     color: { name: "金色", code: "#f9e9d2" },
     capacity: "512GB",
     stock: 0,
+    img: "",
   },
   {
     id: 37,
@@ -351,6 +388,7 @@ export const products = [
     color: { name: "銀色", code: "#f2f3ee" },
     capacity: "512GB",
     stock: 0,
+    img: "",
   },
   {
     id: 38,
@@ -360,6 +398,7 @@ export const products = [
     color: { name: "天峰藍色", code: "#adc6dc" },
     capacity: "512GB",
     stock: 0,
+    img: "",
   },
   {
     id: 39,
@@ -369,6 +408,7 @@ export const products = [
     color: { name: "石墨色", code: "#5e5d59" },
     capacity: "1TB",
     stock: 0,
+    img: "",
   },
   {
     id: 40,
@@ -378,6 +418,7 @@ export const products = [
     color: { name: "金色", code: "#f9e9d2" },
     capacity: "1TB",
     stock: 0,
+    img: "",
   },
   {
     id: 41,
@@ -387,6 +428,7 @@ export const products = [
     color: { name: "銀色", code: "#f2f3ee" },
     capacity: "1TB",
     stock: 0,
+    img: "",
   },
   {
     id: 42,
@@ -396,6 +438,7 @@ export const products = [
     color: { name: "天峰藍色", code: "#adc6dc" },
     capacity: "1TB",
     stock: 0,
+    img: "",
   },
   {
     id: 43,
@@ -405,6 +448,7 @@ export const products = [
     color: { name: "石墨色", code: "#5e5d59" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 44,
@@ -414,6 +458,7 @@ export const products = [
     color: { name: "金色", code: "#f9e9d2" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 45,
@@ -423,6 +468,7 @@ export const products = [
     color: { name: "銀色", code: "#f2f3ee" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 46,
@@ -432,6 +478,7 @@ export const products = [
     color: { name: "天峰藍色", code: "#adc6dc" },
     capacity: "128GB",
     stock: 0,
+    img: "",
   },
   {
     id: 47,
@@ -441,6 +488,7 @@ export const products = [
     color: { name: "石墨色", code: "#5e5d59" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 48,
@@ -450,6 +498,7 @@ export const products = [
     color: { name: "金色", code: "#f9e9d2" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 49,
@@ -459,6 +508,7 @@ export const products = [
     color: { name: "銀色", code: "#f2f3ee" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 50,
@@ -468,6 +518,7 @@ export const products = [
     color: { name: "天峰藍色", code: "#adc6dc" },
     capacity: "256GB",
     stock: 0,
+    img: "",
   },
   {
     id: 51,
@@ -477,6 +528,7 @@ export const products = [
     color: { name: "石墨色", code: "#5e5d59" },
     capacity: "512GB",
     stock: 0,
+    img: "",
   },
   {
     id: 52,
@@ -486,6 +538,7 @@ export const products = [
     color: { name: "金色", code: "#f9e9d2" },
     capacity: "512GB",
     stock: 0,
+    img: "",
   },
   {
     id: 53,
@@ -495,6 +548,7 @@ export const products = [
     color: { name: "銀色", code: "#f2f3ee" },
     capacity: "512GB",
     stock: 0,
+    img: "",
   },
   {
     id: 54,
@@ -504,6 +558,7 @@ export const products = [
     color: { name: "天峰藍色", code: "#adc6dc" },
     capacity: "512GB",
     stock: 0,
+    img: "",
   },
   {
     id: 55,
@@ -513,6 +568,7 @@ export const products = [
     color: { name: "石墨色", code: "#5e5d59" },
     capacity: "1TB",
     stock: 0,
+    img: "",
   },
   {
     id: 56,
@@ -522,6 +578,7 @@ export const products = [
     color: { name: "金色", code: "#f9e9d2" },
     capacity: "1TB",
     stock: 0,
+    img: "",
   },
   {
     id: 57,
@@ -531,6 +588,7 @@ export const products = [
     color: { name: "銀色", code: "#f2f3ee" },
     capacity: "1TB",
     stock: 0,
+    img: "",
   },
   {
     id: 58,
@@ -540,17 +598,6 @@ export const products = [
     color: { name: "天峰藍色", code: "#adc6dc" },
     capacity: "1TB",
     stock: 0,
+    img: "",
   },
 ] as ProductType[];
-
-export const images = [
-  { id: 1, src: Product_01 },
-  { id: 2, src: Product_02 },
-  { id: 3, src: Product_03 },
-  { id: 4, src: Product_04 },
-  { id: 5, src: Product_05 },
-  { id: 6, src: Product_06 },
-  { id: 7, src: Product_07 },
-  { id: 8, src: Product_08 },
-  { id: 9, src: Product_09 },
-];

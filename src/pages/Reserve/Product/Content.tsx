@@ -1,5 +1,5 @@
-import { useContext, useState } from "react";
-import { images, products } from "../../../data/data";
+import { useContext } from "react";
+import { products } from "../../../data/data";
 import chevron_left from "../../../images/icons/icon_common_back.png";
 import chevron_right from "../../../images/icons/icon_common_to.png";
 import { ProductType } from "../../../types/type";
@@ -9,7 +9,6 @@ import SlideImg from "./SlideImg";
 import Tag from "./Tag";
 
 function Content() {
-  const [productId, setProductId] = useState(1);
   const [selectedProducts, setSelectedProducts] =
     useContext(Context)["selectedProducts"];
 
@@ -57,34 +56,32 @@ function Content() {
       .sort();
   }
 
-  console.log(hasStock(products));
-
   return (
     <section className="md:max-w-[1080px] md:justify-between md:mx-auto md:flex md:min-w-[803px] md:bg-[#ffffff] md:px-auto md:py-[72px] md:px-[36px] md:border md:shadow-[0px_0px_18px_rgba(0,0,0,0.05)] md:border-solid md:border-borderGray md:rounded-[10px]">
       <div className="md:max-w-[476px] md:flex-auto md:h-[426px]">
         <div className="flex justify-center h-[375px] items-center md:bg-primaryPageBackgroundGray bg-secondaryPageBackgroundGray ">
-          {images.map((img, index) =>
-            productId === index + 1 ? (
+          {products.map((item, index) =>
+            selectedProducts.id === index + 1 ? (
               <img
-                src={img.src}
+                src={item.img}
                 alt="productImage"
                 className="md:max-w-none"
                 key={index}
               />
             ) : (
-              <div key={img.id}></div>
+              <div key={index}></div>
             )
           )}
         </div>
         <div className="hidden md:block mt-3 relative">
           <img
             src={chevron_left}
-            className="w-[30px] h-[30px] absolute top-[40%] left-[-30px]"
+            className="w-[30px] h-[30px] absolute top-[40%] left-[-30px] cursor-pointer"
           />
           <SlideImg />
           <img
             src={chevron_right}
-            className="w-[30px] h-[30px] absolute top-[40%] right-[-30px]"
+            className="w-[30px] h-[30px] absolute top-[40%] right-[-30px] cursor-pointer"
           />
         </div>
       </div>
