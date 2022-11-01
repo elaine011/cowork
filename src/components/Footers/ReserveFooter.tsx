@@ -5,7 +5,7 @@ type PropsType = {
   switchRoute?: string;
   functionButtonText: string;
   price?: number;
-  wrapperContext?: "space-between" | "flex-start";
+  wrapperContext?: "space-between" | "flex-start" | "center";
   hint?: string;
   showAlertBox?: () => boolean;
 };
