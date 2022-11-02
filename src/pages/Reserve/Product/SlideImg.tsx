@@ -12,21 +12,21 @@ function SlideImg() {
   }
 
   return (
-    <div className="flex justify-between">
-      {handleSlideImg(products).map((item, index) =>
-        index <= 4 ? (
-          <div key={index}>
-            <img
-              src={item.img}
-              className="bg-primaryPageBackgroundGray w-[82px] cursor-pointer"
-              onClick={() =>
-                setSelectedProducts({ ...selectedProducts, id: item.id })
-              }
-            />
-          </div>
-        ) : (
-          <></>
-        )
+    <div className="flex gap-[3px]">
+      {handleSlideImg(products).map(
+        (item, index) =>
+          item.img !== "" && (
+            <div key={index}>
+              <img
+                src={item.img}
+                alt="productImage"
+                className="bg-primaryPageBackgroundGray w-[82px] cursor-pointer"
+                onClick={() =>
+                  setSelectedProducts({ ...selectedProducts, id: item.id })
+                }
+              />
+            </div>
+          )
       )}
     </div>
   );

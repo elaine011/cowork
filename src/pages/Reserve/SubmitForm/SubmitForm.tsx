@@ -55,7 +55,7 @@ function SubmitForm() {
                 }`}
               />
               {errors.userName?.type && (
-                <ValidationErrorText text={"請輸入中文姓名，限制2~7個字"} />
+                <ValidationErrorText text="請輸入中文姓名，限制2~7個字" />
               )}
               <div className="mb-[10px]">
                 <span className="text-primaryRed mr-1">*</span>
@@ -85,7 +85,7 @@ function SubmitForm() {
                 />
               </div>
               {errors.phone?.type && (
-                <ValidationErrorText text={"手機號碼格式錯誤，請重新輸入"} />
+                <ValidationErrorText text="手機號碼格式錯誤，請重新輸入" />
               )}
               <div className="mb-[10px]">
                 <span className="text-primaryRed mr-1">*</span>
@@ -108,7 +108,7 @@ function SubmitForm() {
                 }`}
               />
               {errors.mail?.type && (
-                <ValidationErrorText text={"Email 格式錯誤，請重新輸入"} />
+                <ValidationErrorText text="Email 格式錯誤，請重新輸入" />
               )}
               <div className="flex items-center gap-[6px]">
                 <input
@@ -131,7 +131,7 @@ function SubmitForm() {
                 </label>
               </div>
               {errors.termsCheck?.type && (
-                <ValidationErrorText text={"請確認同意隱私權及網站使用條款"} />
+                <ValidationErrorText text="請確認同意隱私權及網站使用條款" />
               )}
             </form>
           </div>

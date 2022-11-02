@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { images } from "../../../data/data";
-import controlLeft from "../../../images/icons/reserveControlLeft.png";
-import controlRight from "../../../images/icons/reserveControlRight.png";
+import { images } from "../../data/data";
+import controlLeft from "../../images/icons/reserveControlLeft.png";
+import controlRight from "../../images/icons/reserveControlRight.png";
 
 function Carousell() {
   const [curImgIndex, setCurImgIndex] = useState(0);
@@ -59,7 +59,8 @@ function Carousell() {
               className={`${
                 curImgIndex === index ? "bg-borderGray" : "bg-white"
               } w-[13px] h-[13px] border border-solid border-borderGray rounded-[50%]`}
-              onClick={() => setCurImgIndex(index)}></button>
+              onClick={() => setCurImgIndex(index)}
+              key={index}></button>
           );
         })}
       </div>

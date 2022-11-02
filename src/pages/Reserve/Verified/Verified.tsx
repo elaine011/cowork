@@ -42,21 +42,17 @@ function Verified() {
           <h1 className="text-[24px] leading-10 font-bold mb-[2px] md:text-[64px] md:mb-[53px]">
             恭喜您！驗證成功
           </h1>
-          <img src={Heart} className="w-[191px]" />
+          <img src={Heart} className="w-[191px]" alt="heartImage" />
           <>
             <span className="leading-6 md:mt-5 md:text-[24px] md:mb-[15px]">
-              已完成 iphone 13 登記
+              已完成 {registerInfo.product.model} 登記
             </span>
             <span className="leading-6 mb-5 md:text-[24px]">
               敬請等候開賣通知
             </span>
           </>
           <div className="text-center">
-            <Hint
-              text={
-                "注意：簡訊驗證通過才算有登記，完成登記的手機號碼需與會員手機號碼相同，每人限購一支"
-              }
-            />
+            <Hint text="注意：簡訊驗證通過才算有登記，完成登記的手機號碼需與會員手機號碼相同，每人限購一支" />
           </div>
         </div>
         <div className="bg-primaryPageBackgroundGray px-4 py-[30px] text-[14px] leading-6 text-[#333333]">
@@ -123,9 +119,9 @@ function Verified() {
           </div>
         </div>
         <ReserveFooter
-          functionButtonText={"加入會員"}
-          wrapperContext={"center"}
-          hint={"立刻加入會員，開賣通知不漏接！"}
+          functionButtonText="加入會員"
+          wrapperContext="center"
+          hint="立刻加入會員，開賣通知不漏接！"
           clickFn={clickFn}
         />
       </>
