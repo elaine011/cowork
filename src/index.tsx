@@ -17,13 +17,13 @@ const root = ReactDOM.createRoot(
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path='/' element={<App />}>
+      <Route path="/" element={<App />}>
         <Route index element={<Home />} />
-        <Route path='reserve' element={<Landing />} />
-        <Route path='reserve/product' element={<Product />} />
-        <Route path='reserve/submitForm' element={<SubmitForm />} />
-        <Route path='reserve/verified' element={<Verified />} />
-        <Route path='*' element={<Navigate to='/' replace />} />
+        <Route path="reserve" element={<Landing />} />
+        <Route path="reserve/product" element={<Product />} />
+        <Route path="reserve/submitForm" element={<SubmitForm />} />
+        <Route path="reserve/verified" element={<Verified />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
   </BrowserRouter>
