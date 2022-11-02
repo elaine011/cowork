@@ -1,10 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import ReserveHeader from "./components/Headers/ReserveHeader";
+import SasaHeader from "./components/Headers/SasaHeader";
 
 function App() {
+  const location = useLocation();
+
   return (
     <>
-      <ReserveHeader />
+      {location.pathname.split("/").includes("sasa") ? (
+        <SasaHeader />
+      ) : (
+        <ReserveHeader />
+      )}
       <Outlet />
     </>
   );
