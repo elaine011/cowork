@@ -31,82 +31,92 @@ function Verified() {
   return (
     registerInfo.user && (
       <>
-        <div className="flex items-center flex-col px-[18px] pt-[30px] pb-5">
-          <h1 className="text-[24px] leading-10 font-bold mb-[2px]">
+        <div className="flex items-center flex-col px-[18px] pt-[30px] pb-5 md:pt-[59px] md:pb-[30px]">
+          <h1 className="text-[24px] leading-10 font-bold mb-[2px] md:text-[64px] md:mb-[53px]">
             恭喜您！驗證成功
           </h1>
           <img src={Heart} className="w-[191px]" />
           <>
-            <span className="leading-6">已完成 iphone 13 登記</span>
-            <span className="leading-6 mb-5">敬請等候開賣通知</span>
+            <span className="leading-6 md:mt-5 md:text-[24px] md:mb-[15px]">
+              已完成 iphone 13 登記
+            </span>
+            <span className="leading-6 mb-5 md:text-[24px]">
+              敬請等候開賣通知
+            </span>
           </>
-          <Hint
-            text={
-              "注意：簡訊驗證通過才算有登記，完成登記的手機號碼需與會員手機號碼相同，每人限購一支"
-            }
-            fontSize={"16px"}
-          />
+          <div className="text-center">
+            <Hint
+              text={
+                "注意：簡訊驗證通過才算有登記，完成登記的手機號碼需與會員手機號碼相同，每人限購一支"
+              }
+            />
+          </div>
         </div>
         <div className="bg-primaryPageBackgroundGray px-4 py-[30px] text-[14px] leading-6 text-[#333333]">
-          <>
-            <h3 className="font-bold">登記資訊如下：</h3>
-            <hr className="border border-solid border-[#d8d8d8] mt-[9px] mb-[15px]" />
-          </>
-          <div className="px-[7px]">
-            <div className="flex justify-between mb-[10px]">
-              <h3 className="font-bold">登記狀態</h3>
-              <h3 className="font-bold">驗證通過</h3>
-            </div>
-            <div>
-              <h3 className="font-bold mb-[10px]">商品資訊</h3>
-              <div className="pl-[10px]">
-                <div className="flex justify-between">
-                  <div>商品</div>
-                  <div className="font-medium">
-                    {registerInfo.product.model}
+          <div className="md:max-w-[750px] md:mx-auto md:text-[24px]">
+            <>
+              <h3 className="font-bold">登記資訊如下：</h3>
+              <hr className="border border-solid border-[#d8d8d8] mt-[9px] mb-[15px] md:mt-4 md:mb-[30px]" />
+            </>
+            <div className="px-[7px] md:max-w-[750px] md:mx-auto">
+              <div className="flex justify-between mb-[10px] md:mb-[30px]">
+                <h3 className="font-bold">登記狀態</h3>
+                <h3 className="font-bold">驗證通過</h3>
+              </div>
+              <div>
+                <h3 className="font-bold mb-[10px] md:mb-[25px]">商品資訊</h3>
+                <div className="pl-[10px]">
+                  <div className="flex justify-between md:leading-[48px]">
+                    <div>商品</div>
+                    <div className="font-medium">
+                      {registerInfo.product.model}
+                    </div>
                   </div>
-                </div>
-                <div className="flex justify-between">
-                  <div>商品選項</div>
-                  <div className="font-medium">{`${registerInfo.product.model}, ${registerInfo.product.capacity} ${registerInfo.product.color}`}</div>
-                </div>
-                <div className="flex justify-between">
-                  <div>商品數量</div>
-                  <div className="font-medium">1</div>
-                </div>
-                <div className="flex justify-between">
-                  <div>單價</div>
-                  <div className="font-medium text-primaryRed">
-                    NT${handlePriceCommas(registerInfo.product.price)}
+                  <div className="flex justify-between md:leading-[48px]">
+                    <div>商品選項</div>
+                    <div className="font-medium">{`${registerInfo.product.model}, ${registerInfo.product.capacity} ${registerInfo.product.color}`}</div>
+                  </div>
+                  <div className="flex justify-between md:leading-[48px]">
+                    <div>商品數量</div>
+                    <div className="font-medium">1</div>
+                  </div>
+                  <div className="flex justify-between md:leading-[48px]">
+                    <div>單價</div>
+                    <div className="font-medium text-primaryRed">
+                      NT${handlePriceCommas(registerInfo.product.price)}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="mt-[34px]">
-              <h3 className="font-bold mb-[10px]">個人資訊</h3>
-              <div className="pl-[10px]">
-                <div className="flex justify-between">
-                  <div>姓名</div>
-                  <div className="font-medium">
-                    {registerInfo.user.userName}
+              <div className="mt-[34px] md:mt-[82px]">
+                <h3 className="font-bold mb-[10px]">個人資訊</h3>
+                <div className="pl-[10px]">
+                  <div className="flex justify-between md:leading-[48px]">
+                    <div>姓名</div>
+                    <div className="font-medium">
+                      {registerInfo.user.userName}
+                    </div>
                   </div>
-                </div>
-                <div className="flex justify-between">
-                  <div>手機號碼</div>
-                  <div className="font-medium">{registerInfo.user.phone}</div>
-                </div>
-                <div className="flex justify-between">
-                  <div>Email</div>
-                  <div className="font-medium">{registerInfo.user.mail}</div>
+                  <div className="flex justify-between md:leading-[48px]">
+                    <div>手機號碼</div>
+                    <div className="font-medium">{registerInfo.user.phone}</div>
+                  </div>
+                  <div className="flex justify-between md:leading-[48px]">
+                    <div>Email</div>
+                    <div className="font-medium">{registerInfo.user.mail}</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="px-[30px] py-10 mb-[97px]">
-          <ActivityStatement />
+        <div className="md:bg-primaryPageBackgroundGray">
+          <div className="px-[30px] py-10 mb-[97px] md:max-w-[1080px] md:mx-auto md:pb-[296px] ">
+            <ActivityStatement />
+          </div>
         </div>
         <ReserveFooter
+          switchRoute={"/"}
           functionButtonText={"加入會員"}
           wrapperContext={"center"}
           hint={"立刻加入會員，開賣通知不漏接！"}
