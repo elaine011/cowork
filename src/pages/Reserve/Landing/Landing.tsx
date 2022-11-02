@@ -1,10 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import ActivityStatement from "../../../components/Common/ActivityStatement";
 import ReserveFooter from "../../../components/Footers/ReserveFooter";
+import Carousell from "./Carousell";
 import Header from "./Header";
 import ReserveProcess from "./ReserveProcess";
-import Carousell from "./Carousell";
 
 function Landing() {
+  const navigate = useNavigate();
+
+  function clickFn() {
+    navigate("/reserve/submitForm");
+  }
+
   return (
     <>
       <div className="fixed right-0 left-0 top-0 bottom-0 bg-secondaryPageBackgroundGray z-[-50]"></div>
@@ -23,10 +30,7 @@ function Landing() {
           <ActivityStatement />
         </div>
       </main>
-      <ReserveFooter
-        switchRoute={"/reserve/submitForm"}
-        functionButtonText={"搶先登記"}
-      />
+      <ReserveFooter clickFn={clickFn} functionButtonText={"搶先登記"} />
     </>
   );
 }

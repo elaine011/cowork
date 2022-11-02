@@ -75,6 +75,10 @@ function Product() {
     return !(selectedProducts.color === "" || selectedProducts.capacity === "");
   }
 
+  function clickFn() {
+    handleShowAlertBox() && navigate("/reserve/verified");
+  }
+
   return (
     <Context.Provider
       value={{ selectedProducts: [selectedProducts, setSelectedProducts] }}
@@ -91,12 +95,11 @@ function Product() {
         />
       </div>
       <ReserveFooter
-        switchRoute={"/reserve/verified"}
+        clickFn={clickFn}
         functionButtonText={"送出"}
         price={selectedProducts.price}
         wrapperContext={"space-between"}
         hint={"一經送出商品選項，不得修改"}
-        showAlertBox={handleShowAlertBox}
       />
     </Context.Provider>
   );
