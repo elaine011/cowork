@@ -41,12 +41,14 @@ function ReserveFooter({
           bgColor={"#ff5353"}
           letterSpacing={2}
           width={"full"}
-          clickFn={() =>
-            showAlertBox &&
-            showAlertBox() &&
-            switchRoute &&
-            navigate(switchRoute)
-          }
+          clickFn={() => {
+            if (showAlertBox) {
+              const canSwitch = showAlertBox();
+              canSwitch && switchRoute && navigate(switchRoute);
+              return;
+            }
+            switchRoute && navigate(switchRoute);
+          }}
         />
       </div>
     </footer>
