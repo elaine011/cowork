@@ -1,23 +1,19 @@
-import { useNavigate } from "react-router-dom";
 import FunctionButton from "../Common/FunctionButton";
 
 type PropsType = {
-  switchRoute?: string;
   functionButtonText: string;
   price?: number;
   wrapperContext?: "space-between" | "flex-start" | "center";
   hint?: string;
-  showAlertBox?: () => boolean;
+  clickFn?: () => void;
 };
 function ReserveFooter({
-  switchRoute,
   price,
   wrapperContext,
   functionButtonText,
   hint,
-  showAlertBox,
+  clickFn,
 }: PropsType) {
-  const navigate = useNavigate();
   return (
     <footer
       className={`text-center fixed border-t-[2px] border-solid border-borderGray bg-white bottom-0 left-0 right-0 ${
@@ -41,14 +37,7 @@ function ReserveFooter({
           bgColor={"#ff5353"}
           letterSpacing={2}
           width={"full"}
-          clickFn={() => {
-            if (showAlertBox) {
-              const canSwitch = showAlertBox();
-              canSwitch && switchRoute && navigate(switchRoute);
-              return;
-            }
-            switchRoute && navigate(switchRoute);
-          }}
+          clickFn={clickFn}
         />
       </div>
     </footer>

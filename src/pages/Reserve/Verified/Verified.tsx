@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ActivityStatement from "../../../components/Common/ActivityStatement";
 import Hint from "../../../components/Common/Hint";
 import ReserveFooter from "../../../components/Footers/ReserveFooter";
@@ -21,12 +22,18 @@ type registerInfoType = {
 
 function Verified() {
   const [registerInfo, setRegisterInfo] = useState({} as registerInfoType);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setRegisterInfo(
       JSON.parse(sessionStorage.getItem("registerInfo") as string) ?? {}
     );
   }, []);
+
+  function clickFn() {
+    sessionStorage.clear();
+    navigate("/");
+  }
 
   return (
     registerInfo.user && (
@@ -116,10 +123,10 @@ function Verified() {
           </div>
         </div>
         <ReserveFooter
-          switchRoute={"/"}
           functionButtonText={"加入會員"}
           wrapperContext={"center"}
           hint={"立刻加入會員，開賣通知不漏接！"}
+          clickFn={clickFn}
         />
       </>
     )
