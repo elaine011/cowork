@@ -33,21 +33,21 @@ function SasaHeader() {
         </div>
         <div>
           <div className="flex items-center justify-end h-[50px]">
-            <div className="w-[15px] h-[15px] grid place-items-center mr-[10px]">
+            <div className="w-[15px] h-[15px] grid place-items-center mr-[10px] cursor-pointer">
               <img src={PhoneIcon} alt="phoneIcon" />
             </div>
             <div className="mr-[5px] flex">
-              <div className="w-[15px] h-[15px] grid place-items-center mr-[10px]">
+              <div className="w-[15px] h-[15px] grid place-items-center mr-[10px] cursor-pointer">
                 <img src={UserIcon} alt="userIcon" />
               </div>
-              <div className="w-[15px] h-[15px] grid place-items-center">
+              <div className="w-[15px] h-[15px] grid place-items-center cursor-pointer">
                 <img src={CartIcon} alt="cartIcon" />
               </div>
             </div>
-            <span className="bg-primaryRed px-[9px] py-[2px] text-[#ffffff] rounded-[10px] text-[12px] leading-[100%]">
+            <span className="bg-primaryRed px-[9px] py-[2px] text-[#ffffff] rounded-[10px] text-[12px] leading-[100%] cursor-pointer">
               10
             </span>
-            <div className="ml-6 flex items-center">
+            <div className="ml-6 flex items-center cursor-pointer">
               <div className="w-[15px] h-[15px] grid place-items-center mr-[5px]">
                 <img src={LanguageIcon} alt="languageIcon" />
               </div>
@@ -56,7 +56,7 @@ function SasaHeader() {
                 <img src={ArrowDwonIcon} alt="arrowDwonIcon" />
               </div>
             </div>
-            <div className="ml-[10px] flex items-center">
+            <div className="ml-[10px] flex items-center cursor-pointer">
               <div className="w-[15px] h-[15px] grid place-items-center mr-[5px]">
                 <img src={CurrencyIcon} alt="currencyIcon" />
               </div>
@@ -69,7 +69,7 @@ function SasaHeader() {
           <div className="flex min-h-[50px] pt-[12px]">
             <div className="flex max-w-[685px] flex-wrap justify-start items-start">
               {NavItem.map(({ title, items }) => (
-                <div className="mr-5 flex items-center">
+                <div className="mr-5 flex items-center cursor-pointer">
                   <div>{title}</div>
                   {items && (
                     <div className="w-[15px] h-[15px] grid place-items-center ml-[3px]">

@@ -9,6 +9,7 @@ import Verified from "./pages/Reserve/Verified/Verified";
 
 import reportWebVitals from "./reportWebVitals";
 
+import SasaHeader from "./components/Headers/SasaHeader";
 import "./index.css";
 
 const root = ReactDOM.createRoot(
@@ -23,6 +24,7 @@ root.render(
         <Route path="reserve/product" element={<Product />} />
         <Route path="reserve/submitForm" element={<SubmitForm />} />
         <Route path="reserve/verified" element={<Verified />} />
+        <Route path="sasa" element={<SasaHeader />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
