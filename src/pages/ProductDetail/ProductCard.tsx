@@ -32,7 +32,7 @@ function ProductCard({
           <ProductLabel
             status={status}
             posLeft={status === "即將開賣" ? "10px" : "18px"}
-            posBottom={status === "即將開賣" ? "13px" : "35%"}
+            posBottom="13px"
           />
         )}
         <img
