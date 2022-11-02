@@ -6,7 +6,7 @@ import Landing from "./pages/Reserve/Landing/Landing";
 import Product from "./pages/Reserve/Product/Product";
 import SubmitForm from "./pages/Reserve/SubmitForm/SubmitForm";
 import Verified from "./pages/Reserve/Verified/Verified";
-
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import reportWebVitals from "./reportWebVitals";
 
 import SasaHeader from "./components/Headers/SasaHeader";
@@ -24,7 +24,7 @@ root.render(
         <Route path="reserve/product" element={<Product />} />
         <Route path="reserve/submitForm" element={<SubmitForm />} />
         <Route path="reserve/verified" element={<Verified />} />
-        <Route path="sasa" element={<SasaHeader />} />
+        <Route path="/productDetail" element={<ProductDetail />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

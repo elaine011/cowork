@@ -1,0 +1,72 @@
+import React from "react";
+import favorite from "../../images/productDetail/favorite.png";
+import cartGray from "../../images/productDetail/ic_shopnav_cart.png";
+import ProductLabel from "./ProductLabel";
+
+type PropsType = {
+  image: string;
+  name: string;
+  title: string;
+  originalPrice: number;
+  afterDiscount: number;
+  status: string;
+  borderNone: boolean;
+};
+
+function ProductCard({
+  image,
+  name,
+  title,
+  borderNone,
+  originalPrice,
+  status,
+  afterDiscount,
+}: PropsType) {
+  return (
+    <li
+      className={`flex py-[20px] items-start ${
+        borderNone ? "border-b-0" : "border-b "
+      } border-solid border-[#e5e5e5]`}>
+      <div className="relative">
+        {status !== "販售中" && (
+          <ProductLabel
+            status={status}
+            posLeft={status === "即將開賣" ? "10px" : "18px"}
+            posBottom={status === "即將開賣" ? "13px" : "35%"}
+          />
+        )}
+        <img
+          src={image}
+          alt="product_image"
+          className="w-[108px] max-w-[unset] mr-[17px]"
+        />
+      </div>
+      <div>
+        <h3 className="text-thirdGray text-[14px]">{title}</h3>
+        <h2 className="text-[14px] mb-[30px]">{name}</h2>
+        <div className="flex justify-between">
+          <div>
+            <span className="text-[12px] text-thirdGray line-through">
+              NT${originalPrice}
+            </span>
+            <p className="text-[16px] text-[#ff655d]">NT${afterDiscount}</p>
+          </div>
+          <div className="flex items-end mb-[5px] gap-[12px]">
+            <img
+              src={favorite}
+              alt="favorite_image"
+              className="hover:cursor-pointer"
+            />
+            <img
+              src={cartGray}
+              alt="cart_image"
+              className="hover:cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+    </li>
+  );
+}
+
+export default ProductCard;
