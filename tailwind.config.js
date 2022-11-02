@@ -13,7 +13,7 @@ module.exports = {
         primaryPageBackgroundGray: "#f2f2f2",
         secondaryPageBackgroundGray: "#fafafa",
         primaryGray: "#545454",
-        secondaryGary: "#666666",
+        secondaryGray: "#666666",
         thirdGray: "#999999",
         hintGray: "#616161",
         primaryBrown: "#c89185",
