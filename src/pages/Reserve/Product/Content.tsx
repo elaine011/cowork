@@ -58,7 +58,7 @@ function Content() {
   }
 
   return (
-    <section className="md:max-w-[1080px] md:justify-between md:mx-auto md:flex md:bg-[#ffffff] md:px-auto md:py-[72px] md:px-[36px] md:border md:shadow-[0px_0px_18px_rgba(0,0,0,0.05)] md:border-solid md:border-borderGray md:rounded-[10px] w-full">
+    <section className="mb-[80px] md:mb-[230px] md:max-w-[1080px] md:justify-between md:mx-auto md:flex md:bg-[#ffffff] md:px-auto md:py-[72px] md:px-[36px] md:border md:shadow-[0px_0px_18px_rgba(0,0,0,0.05)] md:border-solid md:border-borderGray md:rounded-[10px] w-full">
       <div className="md:max-w-[476px] md:flex-auto md:h-[426px]">
         <div className="flex justify-center h-[375px] items-center md:bg-primaryPageBackgroundGray bg-secondaryPageBackgroundGray ">
           {products.map(
@@ -76,11 +76,13 @@ function Content() {
         <div className="hidden md:block mt-3 relative">
           <img
             src={chevron_left}
+            alt="imageController"
             className="w-[30px] h-[30px] absolute top-[40%] left-[-30px] cursor-pointer"
           />
           <SlideImg />
           <img
             src={chevron_right}
+            alt="imageController"
             className="w-[30px] h-[30px] absolute top-[40%] right-[-30px] cursor-pointer"
           />
         </div>
@@ -96,10 +98,8 @@ function Content() {
           </div>
           <div className="mt-2 text-primaryRed font-normal text-sm">
             <Hint
-              text={
-                "登記的手機號碼需與會員手機號碼相同，每人限購一支一經送出商品選項，不得修改"
-              }
-              fontSize={'14px'}
+              text="登記的手機號碼需與會員手機號碼相同，每人限購一支一經送出商品選項，不得修改"
+              fontSize="14px"
             />
           </div>
         </div>

@@ -1,20 +1,18 @@
-import { useNavigate } from "react-router-dom";
 import ActivityStatement from "../../../components/Common/ActivityStatement";
 import ReserveFooter from "../../../components/Footers/ReserveFooter";
-import Carousell from "./Carousell";
 import Header from "./Header";
 import ReserveProcess from "./ReserveProcess";
+import Carousell from "../../../components/Common/Carousell";
+import { useNavigate } from "react-router-dom";
 
 function Landing() {
   const navigate = useNavigate();
-
   function clickFn() {
     navigate("/reserve/submitForm");
   }
-
   return (
     <>
-      <div className="fixed right-0 left-0 top-0 bottom-0 bg-secondaryPageBackgroundGray z-[-50]"></div>
+      <div className="fixed right-0 left-0 top-0 bottom-0 bg-secondaryPageBackgroundGray z-[-50]" />
       <main className="md:pt-[144px] max-w-[1100px] mx-auto bg-secondaryPageBackgroundGray px-[10px]">
         <div className="md:flex md:mb-[126px] justify-between flex-wrap">
           <div className="md:order-2 md:w-[572px] mx-auto">
@@ -30,7 +28,7 @@ function Landing() {
           <ActivityStatement />
         </div>
       </main>
-      <ReserveFooter clickFn={clickFn} functionButtonText={"搶先登記"} />
+      <ReserveFooter clickFn={clickFn} functionButtonText="搶先登記" />
     </>
   );
 }

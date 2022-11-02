@@ -81,9 +81,8 @@ function Product() {
 
   return (
     <Context.Provider
-      value={{ selectedProducts: [selectedProducts, setSelectedProducts] }}
-    >
-      <div className="fixed bottom-0 left-0 top-0 right-0 -z-50 md:bg-primaryPageBackgroundGray"></div>
+      value={{ selectedProducts: [selectedProducts, setSelectedProducts] }}>
+      <div className="fixed bottom-0 left-0 top-0 right-0 -z-50 md:bg-primaryPageBackgroundGray" />
       <div className="md:px-5 relative grid place-items-center">
         <h1 className="hidden md:flex text-[64px]  justify-center leading-[80px] mb-[43px] md:mt-[53px]">
           選擇商品
@@ -96,10 +95,10 @@ function Product() {
       </div>
       <ReserveFooter
         clickFn={clickFn}
-        functionButtonText={"送出"}
+        functionButtonText="送出"
         price={selectedProducts.price}
-        wrapperContext={"space-between"}
-        hint={"一經送出商品選項，不得修改"}
+        wrapperContext="space-between"
+        hint="一經送出商品選項，不得修改"
       />
     </Context.Provider>
   );

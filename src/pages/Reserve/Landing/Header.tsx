@@ -11,9 +11,7 @@ function Header() {
         <span className="md:hidden">(限量預約登記，額滿為止)</span>
       </h2>
       <div className="px-[45px] md:px-0">
-        <Hint
-          text={"登記的手機號碼需與網購會員手機號碼相同，每會員帳號限預約一支"}
-        />
+        <Hint text="登記的手機號碼需與網購會員手機號碼相同，每會員帳號限預約一支" />
       </div>
     </header>
   );
