@@ -31,7 +31,7 @@ function SasaHeader() {
         <div className="flex mt-5 bg-[#ffffff] px-[42px] h-[65px]">
           <img src={LogoImg} alt="logoImg" className="h-[65px] max-w-[222px]" />
         </div>
-        <div>
+        <div className="grow">
           <div className="flex items-center justify-end h-[50px]">
             <div className="w-[15px] h-[15px] grid place-items-center mr-[10px] cursor-pointer">
               <img src={PhoneIcon} alt="phoneIcon" />
@@ -67,12 +67,11 @@ function SasaHeader() {
             </div>
           </div>
           <div className="flex min-h-[50px] pt-[12px]">
-            <div className="flex max-w-[685px] flex-wrap justify-start items-start">
+            <div className="flex max-w-[685px] flex-wrap justify-start items-start grow">
               {NavItem.map(({ title, items }, index) => (
                 <div
                   className="mr-5 flex items-center cursor-pointer"
-                  key={index}
-                >
+                  key={index}>
                   <div>{title}</div>
                   {items && (
                     <div className="w-[15px] h-[15px] grid place-items-center ml-[3px]">
@@ -81,6 +80,7 @@ function SasaHeader() {
                   )}
                 </div>
               ))}
+              <div className="grow"></div>
             </div>
             <div className="w-[214px] relative ml-[53px]">
               <input

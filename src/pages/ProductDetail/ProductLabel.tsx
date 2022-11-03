@@ -18,7 +18,7 @@ function ProductLabel({
   return (
     <span
       style={{ top: posTop, bottom: posBottom, left: posLeft, right: posRight }}
-      className="absolute flex items-center px-3 py-1 bg-secondaryGray text-white rounded-[32px]">
+      className="absolute z-[50] flex items-center px-3 py-1 bg-secondaryGray text-white rounded-[32px]">
       {status}
     </span>
   );
