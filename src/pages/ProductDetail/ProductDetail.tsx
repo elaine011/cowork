@@ -1,11 +1,10 @@
-import React from "react";
-import ProductCard from "./ProductCard";
+import ProductDetailFooter from "../../components/Footers/ProductDetailFooter";
+import outfit_01 from "../../images/productDetail/outfit_01_big.png";
 import product_01 from "../../images/productDetail/product_01.png";
 import product_02 from "../../images/productDetail/product_02.png";
 import product_03 from "../../images/productDetail/product_03.png";
 import product_04 from "../../images/productDetail/product_04.png";
-import outfit_01 from "../../images/productDetail/outfit_01_big.png";
-import ProductDetailFooter from "../../components/Footers/ProductDetailFooter";
+import ProductCard from "./ProductCard";
 import RecommendOutfit from "./RecommendOutfit";
 
 const productCard = [
