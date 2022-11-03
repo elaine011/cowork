@@ -6,6 +6,7 @@ import product_03 from "../../images/productDetail/product_03.png";
 import product_04 from "../../images/productDetail/product_04.png";
 import outfit_01 from "../../images/productDetail/outfit_01_big.png";
 import ProductDetailFooter from "../../components/Footers/ProductDetailFooter";
+import RecommendOutfit from "./RecommendOutfit";
 
 const productCard = [
   {
@@ -45,37 +46,41 @@ const productCard = [
 function ProductDetail() {
   return (
     <>
-      <main className="max-w-[880px] flex pt-[30px] gap-[17px] mx-auto pb-[320px]">
-        <img src={outfit_01} alt="" className="w-[528px] h-[703px]" />
-        <div>
-          <h1 className="text-[20px] font-medium">
-            柏高島屋ステーションモール店
-          </h1>
-          <p className="text-[14px]">GLOBAL WORK</p>
-          <span className="block text-[14px] mb-[30px]">152cm</span>
-          <h3 className="text-[16px]">穿著單品</h3>
-          <ul className="w-[335px] ml-5">
-            {productCard.map(
-              (
-                { img, status, title, name, originalPrice, afterDiscount },
-                index
-              ) => {
-                return (
-                  <ProductCard
-                    image={img}
-                    name={name}
-                    title={title}
-                    originalPrice={originalPrice}
-                    afterDiscount={afterDiscount}
-                    status={status}
-                    borderNone={index === productCard.length - 1}
-                    key={index}
-                  />
-                );
-              }
-            )}
-          </ul>
+      <main className="max-w-[880px] pt-[30px] mx-auto pb-[320px]">
+        <div className="flex gap-[17px]">
+          <img src={outfit_01} alt="" className="w-[528px] h-[703px]" />
+          <div>
+            <h1 className="text-[20px] font-medium">
+              柏高島屋ステーションモール店
+            </h1>
+            <p className="text-[14px]">GLOBAL WORK</p>
+            <span className="block text-[14px] mb-[30px]">152cm</span>
+            <h3 className="text-[16px]">穿著單品</h3>
+            <ul className="w-[335px] ml-5">
+              {productCard.map(
+                (
+                  { img, status, title, name, originalPrice, afterDiscount },
+                  index
+                ) => {
+                  return (
+                    <ProductCard
+                      image={img}
+                      name={name}
+                      title={title}
+                      originalPrice={originalPrice}
+                      afterDiscount={afterDiscount}
+                      status={status}
+                      borderNone={index === productCard.length - 1}
+                      key={index}
+                    />
+                  );
+                }
+              )}
+            </ul>
+          </div>
         </div>
+        <RecommendOutfit title="此店員其他穿搭" />
+        <RecommendOutfit title="其他穿搭推薦" />
       </main>
       <ProductDetailFooter />
     </>
