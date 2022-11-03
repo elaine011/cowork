@@ -70,11 +70,7 @@ function ProductDetail() {
           <SasaSideBar />
           <div className="max-w-[880px]">
             <div className="flex gap-[17px]">
-              <ImageMagnifier
-                src={outfit_01}
-                width={"528px"}
-                height={"703px"}
-              />
+              <ImageMagnifier src={outfit_01} width="528px" height="703px" />
               <div>
                 <h1 className="text-[20px] font-medium">
                   柏高島屋ステーションモール店
