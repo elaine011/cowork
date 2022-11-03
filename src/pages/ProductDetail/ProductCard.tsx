@@ -43,7 +43,7 @@ function ProductCard({
       </div>
       <div>
         <h3 className="text-thirdGray text-[14px]">{title}</h3>
-        <h2 className="text-[14px] mb-[30px]">{name}</h2>
+        <h2 className="text-[14px] mb-[30px] line-clamp-2">{name}</h2>
         <div className="flex justify-between">
           <div>
             <span className="text-[12px] text-thirdGray line-through">
