@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      {location.pathname.split("/").includes("sasa") ? (
+      {location.pathname.split("/").includes("productDetail") ? (
         <SasaHeader />
       ) : (
         <ReserveHeader />
