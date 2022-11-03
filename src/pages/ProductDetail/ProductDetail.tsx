@@ -1,3 +1,5 @@
+import ImageMagnifier from "../../components/Common/ImageMagnifier";
+import SasaSideBar from "../../components/Common/SasaSideBar";
 import ProductDetailFooter from "../../components/Footers/ProductDetailFooter";
 import outfit_01 from "../../images/productDetail/outfit_01_big.png";
 import product_01 from "../../images/productDetail/product_01.png";
@@ -6,7 +8,6 @@ import product_03 from "../../images/productDetail/product_03.png";
 import product_04 from "../../images/productDetail/product_04.png";
 import ProductCard from "./ProductCard";
 import RecommendOutfit from "./RecommendOutfit";
-import SasaSideBar from "../../components/Common/SasaSideBar";
 
 const productCard = [
   {
@@ -69,7 +70,12 @@ function ProductDetail() {
           <SasaSideBar />
           <div className="max-w-[880px]">
             <div className="flex gap-[17px]">
-              <img src={outfit_01} alt="" className="w-[528px] h-[703px]" />
+              {/* <img src={outfit_01} alt="" className="w-[528px] h-[703px]" /> */}
+              <ImageMagnifier
+                src={outfit_01}
+                width={"528px"}
+                height={"703px"}
+              />
               <div>
                 <h1 className="text-[20px] font-medium">
                   柏高島屋ステーションモール店
