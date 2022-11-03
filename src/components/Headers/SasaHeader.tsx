@@ -68,8 +68,11 @@ function SasaHeader() {
           </div>
           <div className="flex min-h-[50px] pt-[12px]">
             <div className="flex max-w-[685px] flex-wrap justify-start items-start">
-              {NavItem.map(({ title, items }) => (
-                <div className="mr-5 flex items-center cursor-pointer">
+              {NavItem.map(({ title, items }, index) => (
+                <div
+                  className="mr-5 flex items-center cursor-pointer"
+                  key={index}
+                >
                   <div>{title}</div>
                   {items && (
                     <div className="w-[15px] h-[15px] grid place-items-center ml-[3px]">
