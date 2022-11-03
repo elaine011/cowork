@@ -70,7 +70,6 @@ function ProductDetail() {
           <SasaSideBar />
           <div className="max-w-[880px]">
             <div className="flex gap-[17px]">
-              {/* <img src={outfit_01} alt="" className="w-[528px] h-[703px]" /> */}
               <ImageMagnifier
                 src={outfit_01}
                 width={"528px"}
