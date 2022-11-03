@@ -26,7 +26,7 @@ function SasaHeader() {
   ];
 
   return (
-    <div className="bg-primaryBrown xl:px-[130px] mb-[14px] px-[50px] ">
+    <header className="bg-primaryBrown xl:px-[130px] mb-[14px] px-[50px] ">
       <div className="max-w-[1180px] w-full flex justify-between mx-auto gap-[2%]">
         <div className="flex mt-5 bg-[#ffffff] px-[42px] h-[65px]">
           <img src={LogoImg} alt="logoImg" className="h-[65px] max-w-[222px]" />
@@ -91,7 +91,7 @@ function SasaHeader() {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 export default SasaHeader;

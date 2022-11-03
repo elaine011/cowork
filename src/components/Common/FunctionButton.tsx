@@ -1,5 +1,6 @@
 type PropsType = {
   text: string;
+  fontSize?: string;
   textColor: string;
   textPosition: "center" | "right" | "left";
   bgColor: string;
@@ -9,6 +10,7 @@ type PropsType = {
 };
 function FunctionButton({
   text,
+  fontSize,
   textColor,
   textPosition,
   bgColor,
@@ -21,14 +23,14 @@ function FunctionButton({
       style={{
         color: textColor,
         textAlign: textPosition,
+        fontSize: fontSize,
         backgroundColor: bgColor,
         letterSpacing: letterSpacing ? `${letterSpacing}px` : "unset",
         width: width === "full" ? "100%" : `${width}px`,
       }}
       form="userInfo"
       className="px-[20px] py-[10px] rounded-[5px] md:text-[20px]"
-      onClick={clickFn ? () => clickFn() : () => {}}
-    >
+      onClick={clickFn ? () => clickFn() : () => {}}>
       {text}
     </button>
   );
