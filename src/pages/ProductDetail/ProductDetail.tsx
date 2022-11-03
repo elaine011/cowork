@@ -57,7 +57,9 @@ function ProductDetail() {
           {breadcrumbs.map(({ title, next }, index) => {
             return (
               <div key={index}>
-                <span className="mr-[5px]">{title}</span>
+                <span className="mr-[5px] hover:cursor-pointer hover:underline">
+                  {title}
+                </span>
                 {next && <span>{">"}</span>}
               </div>
             );

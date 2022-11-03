@@ -23,8 +23,10 @@ function RecommendOutfit({ title }: PropsType) {
       <ul className="flex gap-[16px]">
         {outfitImages.map((img, index) => {
           return (
-            <li key={index}>
-              <img src={img} alt="outfit" />
+            <li
+              key={index}
+              className="hover:opacity-[0.6] cursor-pointer overflow-hidden transition-all duration-300">
+              <img src={img} alt="outfit" className="hover:scale-[1.1]" />
             </li>
           );
         })}

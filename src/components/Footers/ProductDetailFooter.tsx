@@ -19,7 +19,7 @@ const quickLink = [
 ];
 function ProductDetailFooter() {
   return (
-    <footer className="absolute bottom-0 left-0 right-0 pl-[120px] pr-[156px] pt-[40px] pb-[24px] border-t border-solid border-[#e5e5e5]">
+    <footer className="absolute bg-white bottom-0 left-0 right-0 pl-[120px] pr-[156px] pt-[40px] pb-[24px] border-t border-solid border-[#e5e5e5]">
       <div className="flex justify-between">
         <div className="w-[340px]">
           <img src={socialMedia} alt="social_media" className="mb-[8px]" />

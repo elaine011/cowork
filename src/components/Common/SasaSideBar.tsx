@@ -54,7 +54,7 @@ function SasaSideBar() {
       {sideBarData.map((item, index) =>
         item.items ? (
           <details key={index}>
-            <summary className="mb-3 list-none flex items-center cursor-pointer">
+            <summary className="mb-3 hover:text-[#333333] list-none flex items-center cursor-pointer">
               {item.title}
               <div className="w-[16px] h-[16px] grid place-items-center mr-[10px]">
                 <img src={ArrowDwonIcon} alt="arrowDownIcon" />
@@ -64,15 +64,14 @@ function SasaSideBar() {
               {item.items.map((item, index) => (
                 <div
                   className="mb-3 hover:text-[#333333] hover:underline"
-                  key={index}
-                >
+                  key={index}>
                   {item}
                 </div>
               ))}
             </div>
           </details>
         ) : (
-          <div className="mb-3" key={index}>
+          <div className="mb-3 hover:text-[#333333] cursor-pointer" key={index}>
             {item.title}
           </div>
         )

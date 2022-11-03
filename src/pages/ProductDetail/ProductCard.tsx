@@ -24,7 +24,7 @@ function ProductCard({
 }: PropsType) {
   return (
     <li
-      className={`flex py-[20px] items-start ${
+      className={`flex py-[20px] gap-[16px] items-start ${
         borderNone ? "border-b-0" : "border-b "
       } border-solid border-[#e5e5e5]`}>
       <div className="relative">
@@ -35,15 +35,26 @@ function ProductCard({
             posBottom="13px"
           />
         )}
-        <img
-          src={image}
-          alt="product_image"
-          className="w-[108px] max-w-[unset] mr-[17px]"
-        />
+        <div
+          className={`${
+            status === "已售完"
+              ? "cursor-no-drop"
+              : "cursor-pointer overflow-hidden transition-all duration-300 hover:opacity-60"
+          } w-[108px]`}>
+          <img
+            src={image}
+            alt="product_image"
+            className={`w-[108px] max-w-[unset] mr-[17px] ${
+              status === "已售完" ? "" : "hover:scale-[1.1]"
+            } `}
+          />
+        </div>
       </div>
       <div>
         <h3 className="text-thirdGray text-[14px]">{title}</h3>
-        <h2 className="text-[14px] mb-[30px] line-clamp-2">{name}</h2>
+        <h2 className="text-[14px] mb-[30px] line-clamp-2 cursor-pointer hover:text-primaryBrown">
+          {name}
+        </h2>
         <div className="flex justify-between">
           <div>
             <span className="text-[12px] text-thirdGray line-through">
