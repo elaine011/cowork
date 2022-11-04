@@ -28,8 +28,7 @@ function ImageMagnifier({
         height: height,
         width: width,
         cursor: "none",
-      }}
-    >
+      }}>
       <img
         src={src}
         style={{ height, width }}
@@ -72,8 +71,7 @@ function ImageMagnifier({
           backgroundPositionX: `${-x * zoomLevel + magnifieWidth / 2}px`,
           backgroundPositionY: `${-y * zoomLevel + magnifierHeight / 2}px`,
           borderRadius: "50%",
-        }}
-      >
+        }}>
         <div
           style={{
             position: "absolute",
@@ -85,8 +83,7 @@ function ImageMagnifier({
             right: "0",
             transform: "rotate(134deg)",
             boxShadow: "1px -3px 2px 0 #000",
-          }}
-        >
+          }}>
           <div
             style={{
               position: "absolute",
@@ -96,8 +93,7 @@ function ImageMagnifier({
               left: "1px",
               bottom: "6px",
               borderRadius: "16px 16px 0 0",
-            }}
-          ></div>
+            }}></div>
         </div>
       </div>
     </div>

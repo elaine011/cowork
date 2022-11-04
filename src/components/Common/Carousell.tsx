@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
+import ImageMagnifier from "./ImageMagnifier";
 import controlLeft from "../../images/icons/reserveControlLeft.png";
 import controlRight from "../../images/icons/reserveControlRight.png";
 import productControlRight from "../../images/productDetail/arrow_right.png";
@@ -53,10 +54,10 @@ function Carousell({ images }: PropsType) {
   return (
     <div
       className={`flex relative ${
-        currentUrl === "/productDetail" ? "h-[703px]" : "h-[340px]"
+        currentUrl === "/productDetail" ? "h-[703px]" : "h-[370px]"
       } `}>
       {currentUrl !== "/productDetail" && (
-        <span className="absolute right-[20px] top-[20px] text-[12px] w-[40px] h-[20px] text-center bg-[#979797] rounded-[10px] text-white flex items-center justify-center">
+        <span className="absolute z-[50] right-0 top-0 text-[12px] w-[40px] h-[20px] text-center bg-[#979797] rounded-[10px] text-white flex items-center justify-center">
           {curImgIndex + 1}/{images.length}
         </span>
       )}
@@ -115,12 +116,10 @@ function Carousell({ images }: PropsType) {
               }
             />
           ) : (
-            <img
-              src={img}
-              alt="productImage"
+            <div
               className={`absolute ${
-                currentUrl === "/productDetail" ? "" : "top-[-40px] scale-[0.8]"
-              } `}
+                currentUrl === "/productDetail" ? "" : "top-[-40px]"
+              }`}
               style={{
                 left:
                   currentUrl === "/productDetail"
@@ -135,8 +134,12 @@ function Carousell({ images }: PropsType) {
                   );
                 }, 3000);
               }}
-              key={index}
-            />
+              key={index}>
+              <ImageMagnifier
+                src={img}
+                height={currentUrl === "/productDetail" ? "677px" : "unset"}
+              />
+            </div>
           );
         })}
       </div>
@@ -148,7 +151,7 @@ function Carousell({ images }: PropsType) {
               ? "hidden"
               : "block"
             : ""
-        } absolute top-[46%] left-[20px]`}
+        } absolute top-[46%] left-0`}
         onClick={() =>
           setCurImgIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
         }>
@@ -166,7 +169,7 @@ function Carousell({ images }: PropsType) {
               ? "hidden"
               : "block"
             : ""
-        } absolute top-[46%] right-[20px]`}
+        } absolute top-[46%] right-0`}
         onClick={() =>
           setCurImgIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
         }>

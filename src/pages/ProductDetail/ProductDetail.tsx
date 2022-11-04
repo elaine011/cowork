@@ -1,4 +1,3 @@
-import ImageMagnifier from "../../components/Common/ImageMagnifier";
 import SasaSideBar from "../../components/Common/SasaSideBar";
 import ProductDetailFooter from "../../components/Footers/ProductDetailFooter";
 import product_01 from "../../images/productDetail/product_01.png";
