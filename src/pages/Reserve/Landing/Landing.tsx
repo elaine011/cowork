@@ -4,6 +4,7 @@ import Header from "./Header";
 import ReserveProcess from "./ReserveProcess";
 import Carousell from "../../../components/Common/Carousell";
 import { useNavigate } from "react-router-dom";
+import { reserveCarousellImages } from "../../../data/data";
 
 function Landing() {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ function Landing() {
             <ReserveProcess />
           </div>
           <div className="md:order-1 overflow-hidden md:w-[350px] max-w-[350px] my-5 mx-auto">
-            <Carousell />
+            <Carousell images={reserveCarousellImages} />
           </div>
         </div>
 
