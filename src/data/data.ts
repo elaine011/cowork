@@ -7,6 +7,12 @@ import Product_06 from "../images/reserve-products/product_06.png";
 import Product_07 from "../images/reserve-products/product_07.png";
 import Product_08 from "../images/reserve-products/product_08.png";
 import Product_09 from "../images/reserve-products/product_09.png";
+import outfit_01 from "../images/productDetail/outfit_01_big.png";
+import outfit_02 from "../images/productDetail/outfit_02_big.png";
+import outfit_03 from "../images/productDetail/outfit_03_big.png";
+import outfit_04 from "../images/productDetail/outfit_04_big.png";
+import outfit_05 from "../images/productDetail/outfit_05_big.png";
+import video_01 from "../images/productDetail/dog.mp4";
 import { ProductType } from "../types/type";
 
 export const products = [
@@ -602,14 +608,23 @@ export const products = [
   },
 ] as ProductType[];
 
-export const images = [
-  { id: 1, src: Product_01 },
-  { id: 2, src: Product_02 },
-  { id: 3, src: Product_03 },
-  { id: 4, src: Product_04 },
-  { id: 5, src: Product_05 },
-  { id: 6, src: Product_06 },
-  { id: 7, src: Product_07 },
-  { id: 8, src: Product_08 },
-  { id: 9, src: Product_09 },
+export const reserveCarousellImages = [
+  Product_01,
+  Product_02,
+  Product_03,
+  Product_04,
+  Product_05,
+  Product_06,
+  Product_07,
+  Product_08,
+  Product_09,
+];
+
+export const productCarousellImages = [
+  outfit_01,
+  outfit_02,
+  outfit_03,
+  outfit_04,
+  outfit_05,
+  video_01,
 ];

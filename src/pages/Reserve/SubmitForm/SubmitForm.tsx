@@ -125,7 +125,9 @@ function SubmitForm() {
                 />
                 <label htmlFor="termsCheck">
                   我已經閱讀並同意{" "}
-                  <button className="text-primaryBlue hover:underline">
+                  <button
+                    className="text-primaryBlue hover:underline"
+                    type="button">
                     隱私權及網站使用條款
                   </button>
                 </label>
