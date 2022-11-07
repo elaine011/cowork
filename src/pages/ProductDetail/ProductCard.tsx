@@ -1,4 +1,3 @@
-import React from "react";
 import favorite from "../../images/productDetail/favorite.png";
 import cartGray from "../../images/productDetail/ic_shopnav_cart.png";
 import ProductLabel from "./ProductLabel";

@@ -1,5 +1,3 @@
-import React from "react";
-
 type PropsType = {
   status: string;
   posTop?: string;

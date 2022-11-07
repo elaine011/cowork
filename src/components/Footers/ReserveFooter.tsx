@@ -7,6 +7,7 @@ type PropsType = {
   hint?: string;
   clickFn?: () => void;
 };
+
 function ReserveFooter({
   price,
   wrapperContext,

@@ -1,16 +1,7 @@
 import React from "react";
-import register from "../../../images/icons/registerInfo.png";
-import timer from "../../../images/icons/timer.png";
-import check from "../../../images/icons/check.png";
-import cart from "../../../images/icons/cart.png";
 import chevron from "../../../images/icons/chevron.png";
+import { process } from "../../../data/data";
 
-const process = [
-  { img: register, text: "填寫登記資料", active: false },
-  { img: timer, text: "等待審核驗證", active: false },
-  { img: check, text: "確認驗證通過", active: true },
-  { img: cart, text: "開賣日購買", active: false },
-];
 function ReserveProcess() {
   return (
     <div className="md:max-w-[571px] px-[14px] py-[9px] bg-white rounded-[5px]">

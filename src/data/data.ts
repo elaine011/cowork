@@ -12,7 +12,16 @@ import outfit_02 from "../images/productDetail/outfit_02_big.png";
 import outfit_03 from "../images/productDetail/outfit_03_big.png";
 import outfit_04 from "../images/productDetail/outfit_04_big.png";
 import outfit_05 from "../images/productDetail/outfit_05_big.png";
+import clotheProduct_01 from "../images/productDetail/product_01.png";
+import clotheProduct_02 from "../images/productDetail/product_02.png";
+import clotheProduct_03 from "../images/productDetail/product_03.png";
+import clotheProduct_04 from "../images/productDetail/product_04.png";
 import video_01 from "../images/productDetail/dog.mp4";
+import video_02 from "../images/productDetail/dog.mp4";
+import register from "../images/icons/registerInfo.png";
+import timer from "../images/icons/timer.png";
+import check from "../images/icons/check.png";
+import cart from "../images/icons/cart.png";
 import { ProductType } from "../types/type";
 
 export const products = [
@@ -623,8 +632,143 @@ export const reserveCarousellImages = [
 export const productCarousellImages = [
   outfit_01,
   outfit_02,
+  video_01,
   outfit_03,
   outfit_04,
   outfit_05,
-  video_01,
+  video_02,
+];
+
+export const productCard = [
+  {
+    img: clotheProduct_01,
+    status: "即將開賣",
+    title: "niko and ...",
+    name: "LOWRYS FARM素色飄逸垂墜感修身百褶長裙-三色",
+    originalPrice: 5,
+    afterDiscount: 200,
+  },
+  {
+    img: clotheProduct_02,
+    status: "已售完",
+    title: "niko and ...",
+    name: "LEPSIM【官網獨享價】腰部鬆緊薄料長裙-四色",
+    originalPrice: 5,
+    afterDiscount: 200,
+  },
+  {
+    img: clotheProduct_03,
+    status: "販售中",
+    title: "niko and ...",
+    name: "丹寧帆布托特包 手提肩背兩用 文青風",
+    originalPrice: 5,
+    afterDiscount: 200,
+  },
+  {
+    img: clotheProduct_04,
+    status: "販售中",
+    title: "niko and ...",
+    name: "女限定款素面簡約拉鍊後背包-三色",
+    originalPrice: 5,
+    afterDiscount: 200,
+  },
+];
+
+export const breadcrumbs = [
+  { title: "首頁", next: true },
+  { title: "日本穿搭", next: true },
+  { title: "穿搭介紹", next: false },
+];
+
+export const outfitImages = [
+  outfit_01,
+  outfit_02,
+  outfit_03,
+  outfit_01,
+  outfit_05,
+  outfit_03,
+];
+
+export const process = [
+  { img: register, text: "填寫登記資料", active: false },
+  { img: timer, text: "等待審核驗證", active: false },
+  { img: check, text: "確認驗證通過", active: true },
+  { img: cart, text: "開賣日購買", active: false },
+];
+
+export const sideBarData = [
+  { title: "全站商品" },
+  { title: "人氣商品推薦" },
+  { title: "最新活動" },
+  {
+    title: "9月限時活動",
+    items: [
+      "【獨家限時9折】",
+      "【限量10000件】",
+      "【本月限定】",
+      "【買一送一】",
+    ],
+  },
+  {
+    title: "本月主題推薦",
+    items: ["【SASA聯名同款】", "【91APP X SASA】"],
+  },
+  {
+    title: "流行女鞋",
+    items: ["【韓國經典帆布鞋】", "【日系涼鞋】"],
+  },
+  {
+    title: "手工婚鞋",
+    items: ["【NO.1手工婚鞋】"],
+  },
+  {
+    title: "包包系列",
+    items: ["【托特包】", "【手拿包】", "【水桶包】", "【半月包】"],
+  },
+  {
+    title: "獨家聯名",
+    items: [
+      "【NO.1冠軍小白鞋家族】",
+      "【Kitty獨家聯名鞋款】",
+      "【美樂蒂獨家聯名鞋款】",
+      "【美腿製造機涼鞋】",
+    ],
+  },
+  {
+    title: "貼心鞋材",
+    items: ["【皮革】", "【氣墊】"],
+  },
+  {
+    title: "選款式",
+    items: ["【小白鞋】", "【獨家聯名鞋】", "【涼鞋】", "【拖鞋】"],
+  },
+];
+
+export const quickLink = [
+  {
+    title: "關於我們",
+    link: ["品牌故事", "商店簡介", "門市資訊", "隱私權條款"],
+  },
+  { title: "購物說明", link: ["付款方式", "運送方式", "退換貨方式"] },
+  {
+    title: "客服資訊",
+    link: ["客服留言", "常見問題", "會員權益聲明", "聯絡我們"],
+  },
+];
+
+export const navItem = [
+  {
+    title: "商品分類",
+    items: ["面部護理", "潮流彩妝", "香水香薰", "個人護理"],
+  },
+  {
+    title: "Latest Promotions",
+    items: ["買Maybeline指定系列產品即送睫毛膏"],
+  },
+  {
+    title: "Crayon Shinchan 15% off",
+  },
+  {
+    title: "Best Sellers",
+  },
 ];

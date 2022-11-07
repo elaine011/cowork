@@ -1,20 +1,8 @@
-import outfit_01 from "../../images/productDetail/outfit_01.png";
-import outfit_02 from "../../images/productDetail/outfit_02.png";
-import outfit_03 from "../../images/productDetail/outfit_03.png";
-import outfit_04 from "../../images/productDetail/outfit_04.png";
-import outfit_05 from "../../images/productDetail/outfit_05.png";
+import { outfitImages } from "../../data/data";
 
 type PropsType = {
   title: string;
 };
-const outfitImages = [
-  outfit_01,
-  outfit_02,
-  outfit_03,
-  outfit_01,
-  outfit_05,
-  outfit_03,
-];
 
 function RecommendOutfit({ title }: PropsType) {
   return (
