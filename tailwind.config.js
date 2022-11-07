@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -19,7 +21,47 @@ module.exports = {
         primaryBrown: "#c89185",
         borderGray: "#dddddd",
       },
+      animation: {
+        move: "move .75s linear infinite",
+        lighting: "lighting 1000ms alternate infinite ease",
+      },
+      keyframes: {
+        move: {
+          "0%": {
+            transform: "translate(8px,8px)",
+          },
+          "100%": {
+            transform: "translate(0px,0px)",
+          },
+        },
+        lighting: {
+          "0%, 85%": {
+            color: " #4b4b4b",
+            "text-shadow": "none",
+          },
+          "100%": {
+            color: "#ec994b",
+            "text-shadow": "0 0 5px #80032f, 0 0 3px #ce251",
+          },
+        },
+      },
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/line-clamp")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/line-clamp"),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".rotate-y-180": {
+          transform: "rotateY(180deg)",
+        },
+        ".rotate-y-0": {
+          transform: "rotateY(0deg)",
+        },
+        ".backface-hidden": {
+          backfaceVisibility: "hidden",
+        },
+      });
+    }),
+  ],
 };
