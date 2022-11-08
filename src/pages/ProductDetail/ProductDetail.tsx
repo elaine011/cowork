@@ -5,6 +5,8 @@ import RecommendOutfit from "./RecommendOutfit";
 import Carousell from "../../components/Common/Carousell";
 import {
   productCarousellImages,
+  outfitWithClerkImages,
+  recommnedOutfitImages,
   productCard,
   breadcrumbs,
 } from "../../data/data";
@@ -69,8 +71,14 @@ function ProductDetail() {
                 </ul>
               </div>
             </div>
-            <RecommendOutfit title="此店員其他穿搭" />
-            <RecommendOutfit title="其他穿搭推薦" />
+            <RecommendOutfit
+              title="此店員其他穿搭"
+              images={outfitWithClerkImages}
+            />
+            <RecommendOutfit
+              title="其他穿搭推薦"
+              images={recommnedOutfitImages}
+            />
           </div>
         </div>
       </main>

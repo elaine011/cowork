@@ -8,19 +8,18 @@ function Home() {
   const titleText = "請選擇想去的頁面...";
 
   return (
-    <>
-      <h1 className="text-center text-[48px] font-medium mt-4">
+    <div className="flex flex-col gap-[50px] justify-center bg-gradient-to-t min-h-[100vh] from-[#e0eafc] to-[#cfdef3] pb-[100px]">
+      <h1 className="text-center text-[32px] font-medium md:text-[48px]">
         {titleText.split("").map((text, index) => (
           <span
             className="animate-lighting"
             key={index}
-            style={{ animationDelay: `${150 + 150 * index}ms` }}
-          >
+            style={{ animationDelay: `${150 + 150 * index}ms` }}>
             {text}
           </span>
         ))}
       </h1>
-      <div className="flex gap-[60px] pt-10 justify-center flex-wrap">
+      <div className="flex gap-[150px] pt-10 justify-center flex-wrap">
         <NavigateCard
           text={"點我去搶購頁面"}
           navigateTarget={"reserve"}
@@ -34,7 +33,7 @@ function Home() {
           bgImg={productDetailPage}
         />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -12,12 +12,18 @@ import outfit_02 from "../images/productDetail/outfit_02_big.png";
 import outfit_03 from "../images/productDetail/outfit_03_big.png";
 import outfit_04 from "../images/productDetail/outfit_04_big.png";
 import outfit_05 from "../images/productDetail/outfit_05_big.png";
+import outfit_06 from "../images/productDetail/outfit_06.png";
+import outfit_07 from "../images/productDetail/outfit_07.png";
+import outfit_08 from "../images/productDetail/outfit_08.png";
+import outfit_09 from "../images/productDetail/outfit_09.png";
+import outfit_10 from "../images/productDetail/outfit_10.png";
+import outfit_11 from "../images/productDetail/outfit_11.png";
 import clotheProduct_01 from "../images/productDetail/product_01.png";
 import clotheProduct_02 from "../images/productDetail/product_02.png";
 import clotheProduct_03 from "../images/productDetail/product_03.png";
 import clotheProduct_04 from "../images/productDetail/product_04.png";
 import video_01 from "../images/productDetail/dog.mp4";
-import video_02 from "../images/productDetail/dog.mp4";
+import video_02 from "../images/productDetail/cat.mp4";
 import register from "../images/icons/registerInfo.png";
 import timer from "../images/icons/timer.png";
 import check from "../images/icons/check.png";
@@ -632,11 +638,11 @@ export const reserveCarousellImages = [
 export const productCarousellImages = [
   outfit_01,
   outfit_02,
-  video_01,
+  video_02,
   outfit_03,
   outfit_04,
   outfit_05,
-  video_02,
+  video_01,
 ];
 
 export const productCard = [
@@ -646,7 +652,7 @@ export const productCard = [
     title: "niko and ...",
     name: "LOWRYS FARM素色飄逸垂墜感修身百褶長裙-三色",
     originalPrice: 5,
-    afterDiscount: 200,
+    afterDiscount: 1200,
   },
   {
     img: clotheProduct_02,
@@ -654,7 +660,7 @@ export const productCard = [
     title: "niko and ...",
     name: "LEPSIM【官網獨享價】腰部鬆緊薄料長裙-四色",
     originalPrice: 5,
-    afterDiscount: 200,
+    afterDiscount: 530,
   },
   {
     img: clotheProduct_03,
@@ -662,7 +668,7 @@ export const productCard = [
     title: "niko and ...",
     name: "丹寧帆布托特包 手提肩背兩用 文青風",
     originalPrice: 5,
-    afterDiscount: 200,
+    afterDiscount: 250,
   },
   {
     img: clotheProduct_04,
@@ -670,7 +676,7 @@ export const productCard = [
     title: "niko and ...",
     name: "女限定款素面簡約拉鍊後背包-三色",
     originalPrice: 5,
-    afterDiscount: 200,
+    afterDiscount: 740,
   },
 ];
 
@@ -680,13 +686,22 @@ export const breadcrumbs = [
   { title: "穿搭介紹", next: false },
 ];
 
-export const outfitImages = [
+export const outfitWithClerkImages = [
   outfit_01,
   outfit_02,
   outfit_03,
   outfit_01,
   outfit_05,
   outfit_03,
+];
+
+export const recommnedOutfitImages = [
+  outfit_06,
+  outfit_07,
+  outfit_08,
+  outfit_09,
+  outfit_10,
+  outfit_11,
 ];
 
 export const process = [

@@ -25,7 +25,7 @@ function Landing() {
           </div>
         </div>
 
-        <div className="mb-[100px]">
+        <div className="pb-[100px]">
           <ActivityStatement />
         </div>
       </main>
