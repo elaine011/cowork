@@ -1,54 +1,15 @@
 import SasaSideBar from "../../components/Common/SasaSideBar";
 import ProductDetailFooter from "../../components/Footers/ProductDetailFooter";
-import product_01 from "../../images/productDetail/product_01.png";
-import product_02 from "../../images/productDetail/product_02.png";
-import product_03 from "../../images/productDetail/product_03.png";
-import product_04 from "../../images/productDetail/product_04.png";
 import ProductCard from "./ProductCard";
 import RecommendOutfit from "./RecommendOutfit";
 import Carousell from "../../components/Common/Carousell";
-import { productCarousellImages } from "../../data/data";
-
-const productCard = [
-  {
-    img: product_01,
-    status: "即將開賣",
-    title: "niko and ...",
-    name: "LOWRYS FARM素色飄逸垂墜感修身百褶長裙-三色",
-    originalPrice: 5,
-    afterDiscount: 200,
-  },
-  {
-    img: product_04,
-    status: "已售完",
-    title: "niko and ...",
-    name: "LEPSIM【官網獨享價】腰部鬆緊薄料長裙-四色",
-    originalPrice: 5,
-    afterDiscount: 200,
-  },
-  {
-    img: product_02,
-    status: "販售中",
-    title: "niko and ...",
-    name: "丹寧帆布托特包 手提肩背兩用 文青風",
-    originalPrice: 5,
-    afterDiscount: 200,
-  },
-  {
-    img: product_03,
-    status: "販售中",
-    title: "niko and ...",
-    name: "女限定款素面簡約拉鍊後背包-三色",
-    originalPrice: 5,
-    afterDiscount: 200,
-  },
-];
-
-const breadcrumbs = [
-  { title: "首頁", next: true },
-  { title: "日本穿搭", next: true },
-  { title: "穿搭介紹", next: false },
-];
+import {
+  productCarousellImages,
+  outfitWithClerkImages,
+  recommnedOutfitImages,
+  productCard,
+  breadcrumbs,
+} from "../../data/data";
 
 function ProductDetail() {
   return (
@@ -110,8 +71,14 @@ function ProductDetail() {
                 </ul>
               </div>
             </div>
-            <RecommendOutfit title="此店員其他穿搭" />
-            <RecommendOutfit title="其他穿搭推薦" />
+            <RecommendOutfit
+              title="此店員其他穿搭"
+              images={outfitWithClerkImages}
+            />
+            <RecommendOutfit
+              title="其他穿搭推薦"
+              images={recommnedOutfitImages}
+            />
           </div>
         </div>
       </main>

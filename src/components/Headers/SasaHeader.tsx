@@ -6,30 +6,21 @@ import LogoImg from "../../images/productDetail/Logo.png";
 import PhoneIcon from "../../images/productDetail/phoneIcon.png";
 import UserIcon from "../../images/productDetail/userIcon.png";
 import SearchIcon from "../../images/productDetail/Vector.png";
+import { navItem } from "../../data/data";
+import { useNavigate } from "react-router-dom";
 
 function SasaHeader() {
-  const NavItem = [
-    {
-      title: "商品分類",
-      items: ["面部護理", "潮流彩妝", "香水香薰", "個人護理"],
-    },
-    {
-      title: "Latest Promotions",
-      items: ["買Maybeline指定系列產品即送睫毛膏"],
-    },
-    {
-      title: "Crayon Shinchan 15% off",
-    },
-    {
-      title: "Best Sellers",
-    },
-  ];
-
+  const navigate = useNavigate();
   return (
     <header className="bg-primaryBrown xl:px-[130px] mb-[14px] px-[50px] ">
       <div className="max-w-[1180px] w-full flex justify-between mx-auto gap-[2%]">
         <div className="flex mt-5 bg-[#ffffff] px-[42px] h-[65px]">
-          <img src={LogoImg} alt="logoImg" className="h-[65px] max-w-[222px]" />
+          <img
+            src={LogoImg}
+            alt="logoImg"
+            className="h-[65px] max-w-[222px] cursor-pointer"
+            onClick={() => navigate("/")}
+          />
         </div>
         <div className="grow">
           <div className="flex items-center justify-end h-[50px]">
@@ -47,7 +38,7 @@ function SasaHeader() {
             <span className="bg-primaryRed px-[9px] py-[2px] text-[#ffffff] rounded-[10px] text-[12px] leading-[100%] cursor-pointer">
               10
             </span>
-            <div className="ml-6 flex items-center cursor-pointer">
+            <div className="ml-6 flex justify-between items-center cursor-pointer">
               <div className="w-[15px] h-[15px] grid place-items-center mr-[5px]">
                 <img src={LanguageIcon} alt="languageIcon" />
               </div>
@@ -68,7 +59,7 @@ function SasaHeader() {
           </div>
           <div className="flex min-h-[50px] pt-[12px]">
             <div className="flex max-w-[685px] flex-wrap justify-start items-start grow">
-              {NavItem.map(({ title, items }, index) => (
+              {navItem.map(({ title, items }, index) => (
                 <div
                   className="mr-5 flex items-center cursor-pointer"
                   key={index}>

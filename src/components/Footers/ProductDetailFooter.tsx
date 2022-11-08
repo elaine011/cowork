@@ -5,23 +5,13 @@ import igIcon from "../../images/productDetail/igIcon.png";
 import googlePlay from "../../images/productDetail/google_play.png";
 import appStore from "../../images/productDetail/app_store.png";
 import FunctionButton from "../Common/FunctionButton";
+import { quickLink } from "../../data/data";
 
-const quickLink = [
-  {
-    title: "關於我們",
-    link: ["品牌故事", "商店簡介", "門市資訊", "隱私權條款"],
-  },
-  { title: "購物說明", link: ["付款方式", "運送方式", "退換貨方式"] },
-  {
-    title: "客服資訊",
-    link: ["客服留言", "常見問題", "會員權益聲明", "聯絡我們"],
-  },
-];
 function ProductDetailFooter() {
   return (
-    <footer className="absolute bg-white bottom-0 left-0 right-0 pl-[120px] pr-[156px] pt-[40px] pb-[24px] border-t border-solid border-[#e5e5e5]">
+    <footer className="absolute bg-white bottom-0 left-0 right-0 pl-[120px] pr-[156px] pt-[40px] pb-[24px] border-t border-solid border-[#e5e5e5] max-w-[1440px] mx-auto">
       <div className="flex justify-between">
-        <div className="w-[340px]">
+        <div className="w-[340px] mr-[84px]">
           <img src={socialMedia} alt="social_media" className="mb-[8px]" />
           <ul className="flex gap-[8px] mb-[8px]">
             <li>
@@ -44,7 +34,7 @@ function ProductDetailFooter() {
         <ul className="flex text-[#333333] justify-center grow">
           {quickLink.map(({ title, link }, index) => {
             return (
-              <li key={index} className="mr-[116px]">
+              <li key={index} className="grow">
                 <h3 className="font-normal mb-[8px]">{title}</h3>
                 {link.map((linkText, index) => {
                   return (

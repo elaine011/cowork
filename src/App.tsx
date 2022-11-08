@@ -9,8 +9,10 @@ function App() {
     <>
       {location.pathname.split("/").includes("productDetail") ? (
         <SasaHeader />
-      ) : (
+      ) : location.pathname.split("/").includes("reserve") ? (
         <ReserveHeader />
+      ) : (
+        <></>
       )}
       <Outlet />
     </>

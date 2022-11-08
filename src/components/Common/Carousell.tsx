@@ -16,31 +16,27 @@ function Carousell({ images }: PropsType) {
   const touchPosition = useRef({ start: 0, end: 0 });
 
   const observer = useRef<IntersectionObserver | null>(null);
-  const listenerTarget = useCallback(
-    (node: HTMLVideoElement | HTMLImageElement | null) => {
-      if (node) {
-        const options = {
-          rootMargin: "0px",
-          threshold: 0,
-        };
-        const callback = (entries: IntersectionObserverEntry[]) => {
-          if (entries[0].isIntersecting) {
-            clearInterval(intervalId.current);
-            return;
-          }
+  const listenerTarget = useCallback((node: HTMLVideoElement | null) => {
+    if (node) {
+      const options = {
+        rootMargin: "0px",
+        threshold: 0,
+      };
+      const callback = (entries: IntersectionObserverEntry[]) => {
+        if (entries[0].isIntersecting) {
           clearInterval(intervalId.current);
-          intervalId.current = setInterval(() => {
-            setCurImgIndex((prev) =>
-              prev === images.length - 1 ? 0 : prev + 1
-            );
-          }, 3000);
-        };
-        observer.current = new IntersectionObserver(callback, options);
-        observer.current.observe(node);
-      }
-    },
-    []
-  );
+          node.play();
+          return;
+        }
+        clearInterval(intervalId.current);
+        intervalId.current = setInterval(() => {
+          setCurImgIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+        }, 3000);
+      };
+      observer.current = new IntersectionObserver(callback, options);
+      observer.current.observe(node);
+    }
+  }, []);
 
   const [curImgIndex, setCurImgIndex] = useState(0);
   const intervalId = useRef<NodeJS.Timer>();
@@ -80,10 +76,11 @@ function Carousell({ images }: PropsType) {
             setCurImgIndex((prev) =>
               prev === 0 ? images.length - 1 : prev - 1
             );
-            touchPosition.current = { start: 0, end: 0 };
-            return;
+          } else {
+            setCurImgIndex((prev) =>
+              prev === images.length - 1 ? 0 : prev + 1
+            );
           }
-          setCurImgIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
           touchPosition.current = { start: 0, end: 0 };
           intervalId.current = setInterval(() => {
             setCurImgIndex((prev) =>
@@ -107,13 +104,16 @@ function Carousell({ images }: PropsType) {
                     : index * 450 - curImgIndex * 450,
               }}
               ref={listenerTarget}
-              onEnded={() =>
-                (intervalId.current = setInterval(() => {
-                  setCurImgIndex((prev) =>
-                    prev === images.length - 1 ? 0 : prev + 1
-                  );
-                }, 3000))
-              }
+              onEnded={() => {
+                if (curImgIndex === index) {
+                  clearInterval(intervalId.current);
+                  intervalId.current = setInterval(() => {
+                    setCurImgIndex((prev) =>
+                      prev === images.length - 1 ? 0 : prev + 1
+                    );
+                  }, 3000);
+                }
+              }}
             />
           ) : (
             <div
