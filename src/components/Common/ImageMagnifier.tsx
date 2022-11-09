@@ -42,8 +42,8 @@ function ImageMagnifier({
         onMouseMove={(e) => {
           const elem = e.currentTarget;
           const { top, left } = elem.getBoundingClientRect();
-          const x = e.pageX - left;
-          const y = e.pageY - top;
+          const x = e.pageX - left - window.pageXOffset;
+          const y = e.pageY - top - window.pageYOffset;
           setXY([x, y]);
         }}
         onMouseLeave={() => {
