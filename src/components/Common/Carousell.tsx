@@ -148,10 +148,10 @@ function Carousell({ images }: PropsType) {
         className={`${
           currentUrl === "/productDetail"
             ? curImgIndex === 0
-              ? "hidden left-[20px]"
-              : "block left-[20px]"
+              ? "hidden left-0"
+              : "block left-0"
             : "left-0"
-        } absolute top-[46%]`}
+        } absolute top-[40%] w-[50px] h-[100px] flex justify-center items-center`}
         onClick={() =>
           setCurImgIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
         }>
@@ -166,10 +166,10 @@ function Carousell({ images }: PropsType) {
         className={`${
           currentUrl === "/productDetail"
             ? curImgIndex === images.length - 1
-              ? "hidden right-[20px]"
-              : "block right-[20px]"
+              ? "hidden right-0"
+              : "block right-0"
             : "right-0"
-        } absolute top-[46%]`}
+        } absolute top-[40%] w-[50px] h-[100px] flex justify-center items-center`}
         onClick={() =>
           setCurImgIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
         }>

@@ -66,7 +66,7 @@ function Content() {
 
   return (
     <section className="mb-[80px] md:mb-[230px] md:max-w-[1080px] md:justify-between md:mx-auto md:flex md:bg-[#ffffff] md:px-auto md:py-[72px] md:px-[36px] md:border md:shadow-[0px_0px_18px_rgba(0,0,0,0.05)] md:border-solid md:border-borderGray md:rounded-[10px] w-full">
-      <div className="md:max-w-[476px] md:flex-auto md:h-[426px]">
+      <div className="md:min-w-[426px] md:max-w-[476px] md:flex-auto md:h-[426px] md:mr-[50px]">
         <div className="flex justify-center h-[375px] items-center md:bg-primaryPageBackgroundGray bg-secondaryPageBackgroundGray ">
           {products.map(
             (item, index) =>
