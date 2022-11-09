@@ -148,10 +148,10 @@ function Carousell({ images }: PropsType) {
         className={`${
           currentUrl === "/productDetail"
             ? curImgIndex === 0
-              ? "hidden"
-              : "block"
-            : ""
-        } absolute top-[46%] left-0`}
+              ? "hidden left-[20px]"
+              : "block left-[20px]"
+            : "left-0"
+        } absolute top-[46%]`}
         onClick={() =>
           setCurImgIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
         }>
@@ -166,10 +166,10 @@ function Carousell({ images }: PropsType) {
         className={`${
           currentUrl === "/productDetail"
             ? curImgIndex === images.length - 1
-              ? "hidden"
-              : "block"
-            : ""
-        } absolute top-[46%] right-0`}
+              ? "hidden right-[20px]"
+              : "block right-[20px]"
+            : "right-0"
+        } absolute top-[46%]`}
         onClick={() =>
           setCurImgIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
         }>

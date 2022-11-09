@@ -12,11 +12,18 @@ import Tag from "./Tag";
 function Content() {
   const [selectedProducts, setSelectedProducts] =
     useContext(Context)["selectedProducts"];
-
+  function hasStockWithColor(products: ProductType[]) {
+    return products.filter(
+      (item) =>
+        item.stock > 0 &&
+        item.model === selectedProducts.model &&
+        item.color.name === selectedProducts.color
+    );
+  }
   function hasStock(products: ProductType[]) {
-    return products
-      .filter((item) => item.stock > 0)
-      .filter((item) => item.model === selectedProducts.model);
+    return products.filter(
+      (item) => item.stock > 0 && item.model === selectedProducts.model
+    );
   }
 
   function handleDuplicateModel(products: ProductType[]): string[] {
@@ -146,6 +153,7 @@ function Content() {
                 onClickFn={() =>
                   setSelectedProducts({
                     ...selectedProducts,
+                    capacity: "",
                     color: item.name,
                   })
                 }
@@ -158,9 +166,15 @@ function Content() {
               <Tag
                 text={item}
                 key={index}
-                hasStock={hasStock(products)
-                  .map((item) => item.capacity)
-                  .includes(item)}
+                hasStock={
+                  selectedProducts.color
+                    ? hasStockWithColor(products)
+                        .map((item) => item.capacity)
+                        .includes(item)
+                    : hasStock(products)
+                        .map((item) => item.capacity)
+                        .includes(item)
+                }
                 onClickFn={() =>
                   setSelectedProducts({ ...selectedProducts, capacity: item })
                 }
