@@ -7,13 +7,11 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
   useEffect(() => {
-    if (window.location.href === "http://localhost:3000/reserve/verified") {
+    if (window.location.href.split("/").includes("verified")) {
       window.addEventListener(
         "popstate",
         function popState() {
-          if (
-            window.location.href === "http://localhost:3000/reserve/product"
-          ) {
+          if (window.location.href.split("/").includes("product")) {
             sessionStorage.clear();
             navigate("/reserve");
             window.removeEventListener("popstate", popState);
