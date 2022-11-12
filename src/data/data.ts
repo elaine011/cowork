@@ -623,7 +623,7 @@ export const products = [
   },
 ] as ProductType[];
 
-export const reserveCarousellImages = [
+export const reserveCarouselImages = [
   Product_01,
   Product_02,
   Product_03,
@@ -635,7 +635,7 @@ export const reserveCarousellImages = [
   Product_09,
 ];
 
-export const productCarousellImages = [
+export const productCarouselImages = [
   outfit_01,
   outfit_02,
   video_02,
@@ -658,7 +658,7 @@ export const productCard = [
     img: clotheProduct_02,
     status: "已售完",
     title: "niko and ...",
-    name: "LEPSIM【官網獨享價】腰部鬆緊薄料長裙-四色",
+    name: "LEPSIM【官網獨享價】腰部鬆緊薄料長裙-四色，限時甜甜價心動不如馬上行動",
     originalPrice: 5,
     afterDiscount: 530,
   },

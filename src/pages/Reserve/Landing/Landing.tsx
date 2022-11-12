@@ -1,10 +1,10 @@
 import ActivityStatement from "../../../components/Common/ActivityStatement";
 import ReserveFooter from "../../../components/Footers/ReserveFooter";
 import Header from "./Header";
-import ReserveProcess from "./ReserveProcess";
-import Carousell from "../../../components/Common/Carousell";
+import Process from "./Process";
+import Carousel from "../../../components/Common/Carousel";
 import { useNavigate } from "react-router-dom";
-import { reserveCarousellImages } from "../../../data/data";
+import { reserveCarouselImages } from "../../../data/data";
 
 function Landing() {
   const navigate = useNavigate();
@@ -18,10 +18,10 @@ function Landing() {
         <div className="md:flex md:mb-[126px] justify-between flex-wrap">
           <div className="md:order-2 md:w-[572px] mx-auto">
             <Header />
-            <ReserveProcess />
+            <Process />
           </div>
           <div className="md:order-1 overflow-hidden md:w-[350px] max-w-[350px] my-5 mx-auto">
-            <Carousell images={reserveCarousellImages} />
+            <Carousel images={reserveCarouselImages} />
           </div>
         </div>
 
