@@ -1,10 +1,26 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import ReserveHeader from "./components/Headers/ReserveHeader";
 import SasaHeader from "./components/Headers/SasaHeader";
 
 function App() {
   const location = useLocation();
-
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (window.location.href.split("/").includes("verified")) {
+      window.addEventListener(
+        "popstate",
+        function popState() {
+          if (window.location.href.split("/").includes("product")) {
+            sessionStorage.clear();
+            navigate("/reserve");
+            window.removeEventListener("popstate", popState);
+          }
+        },
+        false
+      );
+    }
+  }, [location.pathname]);
   return (
     <>
       {location.pathname.split("/").includes("productDetail") ? (

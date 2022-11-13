@@ -12,11 +12,18 @@ import Tag from "./Tag";
 function Content() {
   const [selectedProducts, setSelectedProducts] =
     useContext(Context)["selectedProducts"];
-
+  function hasStockWithColor(products: ProductType[]) {
+    return products.filter(
+      (item) =>
+        item.stock > 0 &&
+        item.model === selectedProducts.model &&
+        item.color.name === selectedProducts.color
+    );
+  }
   function hasStock(products: ProductType[]) {
-    return products
-      .filter((item) => item.stock > 0)
-      .filter((item) => item.model === selectedProducts.model);
+    return products.filter(
+      (item) => item.stock > 0 && item.model === selectedProducts.model
+    );
   }
 
   function handleDuplicateModel(products: ProductType[]): string[] {
@@ -59,7 +66,7 @@ function Content() {
 
   return (
     <section className="mb-[80px] md:mb-[230px] md:max-w-[1080px] md:justify-between md:mx-auto md:flex md:bg-[#ffffff] md:px-auto md:py-[72px] md:px-[36px] md:border md:shadow-[0px_0px_18px_rgba(0,0,0,0.05)] md:border-solid md:border-borderGray md:rounded-[10px] w-full">
-      <div className="md:max-w-[476px] md:flex-auto md:h-[426px]">
+      <div className="md:min-w-[426px] md:max-w-[476px] md:flex-auto md:h-[426px] md:mr-[50px]">
         <div className="flex justify-center h-[375px] items-center md:bg-primaryPageBackgroundGray bg-secondaryPageBackgroundGray ">
           {products.map(
             (item, index) =>
@@ -146,6 +153,7 @@ function Content() {
                 onClickFn={() =>
                   setSelectedProducts({
                     ...selectedProducts,
+                    capacity: "",
                     color: item.name,
                   })
                 }
@@ -158,9 +166,15 @@ function Content() {
               <Tag
                 text={item}
                 key={index}
-                hasStock={hasStock(products)
-                  .map((item) => item.capacity)
-                  .includes(item)}
+                hasStock={
+                  selectedProducts.color
+                    ? hasStockWithColor(products)
+                        .map((item) => item.capacity)
+                        .includes(item)
+                    : hasStock(products)
+                        .map((item) => item.capacity)
+                        .includes(item)
+                }
                 onClickFn={() =>
                   setSelectedProducts({ ...selectedProducts, capacity: item })
                 }

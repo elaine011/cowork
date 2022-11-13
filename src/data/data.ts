@@ -37,7 +37,7 @@ export const products = [
     price: 32900,
     model: "iphone 13 Pro",
     color: { name: "天峰藍色", code: "#adc6dc" },
-    capacity: "128GB",
+    capacity: "256GB",
     stock: 1,
     img: Product_01,
   },
@@ -377,7 +377,7 @@ export const products = [
     price: 36400,
     model: "iphone 13 Pro",
     color: { name: "天峰藍色", code: "#adc6dc" },
-    capacity: "256GB",
+    capacity: "128GB",
     stock: 0,
     img: "",
   },
@@ -448,7 +448,7 @@ export const products = [
     model: "iphone 13 Pro",
     color: { name: "銀色", code: "#f2f3ee" },
     capacity: "1TB",
-    stock: 0,
+    stock: 2,
     img: "",
   },
   {
@@ -623,7 +623,7 @@ export const products = [
   },
 ] as ProductType[];
 
-export const reserveCarousellImages = [
+export const reserveCarouselImages = [
   Product_01,
   Product_02,
   Product_03,
@@ -635,7 +635,7 @@ export const reserveCarousellImages = [
   Product_09,
 ];
 
-export const productCarousellImages = [
+export const productCarouselImages = [
   outfit_01,
   outfit_02,
   video_02,
@@ -658,7 +658,7 @@ export const productCard = [
     img: clotheProduct_02,
     status: "已售完",
     title: "niko and ...",
-    name: "LEPSIM【官網獨享價】腰部鬆緊薄料長裙-四色",
+    name: "LEPSIM【官網獨享價】腰部鬆緊薄料長裙-四色，限時甜甜價心動不如馬上行動",
     originalPrice: 5,
     afterDiscount: 530,
   },
@@ -785,5 +785,16 @@ export const navItem = [
   },
   {
     title: "Best Sellers",
+  },
+  {
+    title: "Latest Promotions",
+    items: ["買Maybeline指定系列產品即送睫毛膏"],
+  },
+  {
+    title: "Latest Promotions",
+    items: ["買Maybeline指定系列產品即送睫毛膏"],
+  },
+  {
+    title: "Crayon Shinchan 15% off",
   },
 ];

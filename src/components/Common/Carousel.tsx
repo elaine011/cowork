@@ -10,7 +10,7 @@ type PropsType = {
   images: string[];
 };
 
-function Carousell({ images }: PropsType) {
+function Carousel({ images }: PropsType) {
   const location = useLocation();
   const currentUrl = location.pathname;
   const touchPosition = useRef({ start: 0, end: 0 });
@@ -148,10 +148,10 @@ function Carousell({ images }: PropsType) {
         className={`${
           currentUrl === "/productDetail"
             ? curImgIndex === 0
-              ? "hidden"
-              : "block"
-            : ""
-        } absolute top-[46%] left-0`}
+              ? "hidden left-0"
+              : "block left-0"
+            : "left-0"
+        } absolute top-[40%] w-[50px] h-[100px] flex justify-center items-center`}
         onClick={() =>
           setCurImgIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
         }>
@@ -166,10 +166,10 @@ function Carousell({ images }: PropsType) {
         className={`${
           currentUrl === "/productDetail"
             ? curImgIndex === images.length - 1
-              ? "hidden"
-              : "block"
-            : ""
-        } absolute top-[46%] right-0`}
+              ? "hidden right-0"
+              : "block right-0"
+            : "right-0"
+        } absolute top-[40%] w-[50px] h-[100px] flex justify-center items-center`}
         onClick={() =>
           setCurImgIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
         }>
@@ -212,4 +212,4 @@ function Carousell({ images }: PropsType) {
   );
 }
 
-export default Carousell;
+export default Carousel;

@@ -57,8 +57,8 @@ function SasaHeader() {
               </div>
             </div>
           </div>
-          <div className="flex min-h-[50px] pt-[12px]">
-            <div className="flex max-w-[685px] flex-wrap justify-start items-start grow">
+          <div className="flex min-h-[50px] py-[12px]">
+            <div className="flex gap-[10px] max-w-[685px] flex-wrap justify-start items-start grow">
               {navItem.map(({ title, items }, index) => (
                 <div
                   className="mr-5 flex items-center cursor-pointer"

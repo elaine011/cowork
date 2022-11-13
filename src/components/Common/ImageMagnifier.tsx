@@ -59,10 +59,8 @@ function ImageMagnifier({
           width: `${magnifieWidth}px`,
           top: `${y - magnifierHeight / 2}px`,
           left: `${x - magnifieWidth / 2}px`,
-          opacity: "1",
           border: "2px solid #494948",
           boxShadow: "3px 1px 3px 0 #6d6d6c",
-          backgroundColor: "white",
           backgroundImage: `url('${src}')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: `${imgWidth * zoomLevel}px ${
@@ -93,7 +91,8 @@ function ImageMagnifier({
               left: "1px",
               bottom: "6px",
               borderRadius: "16px 16px 0 0",
-            }}></div>
+            }}
+          />
         </div>
       </div>
     </div>

@@ -2,9 +2,9 @@ import SasaSideBar from "../../components/Common/SasaSideBar";
 import ProductDetailFooter from "../../components/Footers/ProductDetailFooter";
 import ProductCard from "./ProductCard";
 import RecommendOutfit from "./RecommendOutfit";
-import Carousell from "../../components/Common/Carousell";
+import Carousel from "../../components/Common/Carousel";
 import {
-  productCarousellImages,
+  productCarouselImages,
   outfitWithClerkImages,
   recommnedOutfitImages,
   productCard,
@@ -32,7 +32,7 @@ function ProductDetail() {
           <div className="max-w-[880px]">
             <div className="flex gap-[17px]">
               <div className="overflow-hidden w-[528px]  mx-auto">
-                <Carousell images={productCarousellImages} />
+                <Carousel images={productCarouselImages} />
               </div>
               <div>
                 <h1 className="text-[20px] font-medium">
