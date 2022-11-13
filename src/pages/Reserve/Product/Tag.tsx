@@ -19,15 +19,14 @@ function Tag({ text, color, hasStock, onClickFn }: TagProps) {
           ? text === selectedProducts.model ||
             text === selectedProducts.color ||
             text === selectedProducts.capacity
-            ? "bg-primaryRed text-[#ffffff]"
+            ? "bg-primaryRed text-[#ffffff] border-primaryRed"
             : "bg-[#ffffff]"
           : "bg-[#ececec] text-thirdGray border-opacity-50 cursor-no-drop"
       }`}
       onClick={() => {
         onClickFn && onClickFn();
       }}
-      disabled={!hasStock}
-    >
+      disabled={!hasStock}>
       <span>{text}</span>
       {color && (
         <span
@@ -35,8 +34,7 @@ function Tag({ text, color, hasStock, onClickFn }: TagProps) {
           style={{
             backgroundColor: `${color}`,
             opacity: hasStock ? "1" : "0.5",
-          }}
-        ></span>
+          }}></span>
       )}
     </button>
   );

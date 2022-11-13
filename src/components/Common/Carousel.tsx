@@ -10,7 +10,7 @@ type PropsType = {
   images: string[];
 };
 
-function Carousell({ images }: PropsType) {
+function Carousel({ images }: PropsType) {
   const location = useLocation();
   const currentUrl = location.pathname;
   const touchPosition = useRef({ start: 0, end: 0 });
@@ -212,4 +212,4 @@ function Carousell({ images }: PropsType) {
   );
 }
 
-export default Carousell;
+export default Carousel;
