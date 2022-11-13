@@ -786,4 +786,15 @@ export const navItem = [
   {
     title: "Best Sellers",
   },
+  {
+    title: "Latest Promotions",
+    items: ["買Maybeline指定系列產品即送睫毛膏"],
+  },
+  {
+    title: "Latest Promotions",
+    items: ["買Maybeline指定系列產品即送睫毛膏"],
+  },
+  {
+    title: "Crayon Shinchan 15% off",
+  },
 ];
