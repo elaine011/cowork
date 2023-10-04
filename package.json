@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,8 +15,12 @@
     "@types/node": "^16.18.2",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
+    "font-awesome": "^4.7.0",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.38.0",
+    "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
@@ -39,5 +48,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.186",
+    "install": "^0.13.0",
+    "npm": "^8.19.2",
+    "tailwindcss": "^3.2.1"
   }
 }

@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import ReserveHeader from "./components/Headers/ReserveHeader";
+import SasaHeader from "./components/Headers/SasaHeader";
 
 function App() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (window.location.href.split("/").includes("verified")) {
+      window.addEventListener(
+        "popstate",
+        function popState() {
+          if (window.location.href.split("/").includes("product")) {
+            sessionStorage.clear();
+            navigate("/reserve");
+            window.removeEventListener("popstate", popState);
+          }
+        },
+        false
+      );
+    }
+  }, [location.pathname]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {location.pathname.split("/").includes("productDetail") ? (
+        <SasaHeader />
+      ) : location.pathname.split("/").includes("reserve") ? (
+        <ReserveHeader />
+      ) : (
+        <></>
+      )}
+      <Outlet />
+    </>
   );
 }
 
